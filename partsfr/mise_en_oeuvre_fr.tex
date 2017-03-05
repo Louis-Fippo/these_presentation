@@ -1,0 +1,19 @@
+\begin{frame}[c]
+\frametitle{Implémentation}
+%\framesubtitle{Local Causality Graph}
+\textbf{Approximations formelles de l'accéssibilité}
+\begin{itemize}
+\item Calcul du  \tval{Graphe de Causalité Locale}
+\item OA/UA: motifs particuliers dans le GLC
+\item Taille GLC: poly(\#automata),exp(|single automaton|)
+\end{itemize}
+\bigskip
+\textbf{Implémentation en ASP (Answer Set Programming)}
+\begin{itemize}
+\item Modélisation du problème: trouver $s_b$, $t_b$ tels que
+\begin{align*}
+{\color{magenta} \neg \OA{s_b \cdot t_b}{g_1}} \ et\ {\color{magenta}\UA{s_b}{g_1}}\ et \  {\color{magenta}\UA{s_0}{s_b}}
+\end{align*}
+\item \'Enumération  avec  clingo
+\end{itemize}
+\end{frame}

@@ -1,0 +1,109 @@
+\begin{frame}[c]
+ \frametitle{Formal approximation of reachability}
+\framesubtitle{Static analysis by abstract interpretation}
+ 
+The reachability approximations  for ANs introduced in
+%\tcite{PMR12-MSCS,FPMR15-TCS}.
+{\small \color{darkgreen} [\citepmrmscs] }%revoir les citations
+
+
+ %\tval{over-approximations} (OA) and \tval{under-approximations} (UA) of the reachability problem:
+$$
+\begin{align*}
+\UA s {s'}&\Rightarrow {\bf s\reach s'} \Rightarrow \OA s {s'}
+\end{align*}
+$$
+\begin{itemize}
+\item OA (\tval{over-approximations}): necessary conditions for {\bf $s\reach s'$} %is true only if $\OA s {s'}$ is true
+\item UA (\tval{under-approximation}): sufficient conditions for {\bf $s\reach s'$} %is true if  $\UA s {s'}$ is true;
+(but the converse does not hold in general)
+\end{itemize}
+
+\tval{Interest:}
+\begin{itemize}
+\item Avoid state space explosion
+\item Decide in an efficient way reachability properties
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[c]
+\frametitle{Formal approximation of reachability}
+\framesubtitle{Local Causality Graph}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Idea for OA and UA}
+\begin{itemize}
+\item Local Causality reasonning
+\item \tval{Nodes of LCG}: local states, objectives, solutions. 
+\end{itemize}
+
+\textbf {Necessary condition}:
+\tval{There exists a traversal of the LCG} s.t.:
+\begin{itemize}
+\item objective $\rightarrow$ follow at least one solution;
+\item local state $\rightarrow$ follow all objectives;
+\item no cycle.
+\end{itemize}
+\textbf {Sufficient condition}:
+\begin{itemize}
+\item LCG has \tval{no cycle};
+\item each objective has \tval{at least one solution};
+\item local states of a same pre-condition have no conflicts.
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+%presentation of the GLC
+  \begin{figure}[h]
+ % \scalebox{0.5}{\input{figures/lcg-oa1.tex}}
+  %\hfill
+  \scalebox{0.3}{\input{figures/lcg-oa2.tex}}
+  \hfill
+  \scalebox{0.3}{\input{figures/lcg-ua.tex}}
+  \caption{\tiny
+  (left) \tval{OA($\state{a_1,b_0,c_1}$,$a_2$)}  
+  (right) \tval{UA($\state{a_0,b_1,c_1}$,$a_2$)} 
+  }
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{comment}
+\begin{frame}[c]
+\frametitle{Formal approximation of reachability}
+\framesubtitle{Local Causality Graph}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Idea for OA and UA}
+\begin{itemize}
+\item Local Causality reasonning
+\item \tval{Nodes of LCG}: local states, objectives, solutions. 
+\end{itemize}
+
+\textbf {Sufficient condition}:
+\begin{itemize}
+\item LCG has \tval{no cycle};
+\item each objective has \tval{at least one solution};
+\item local states of a same pre-condition have no conflicts.
+\end{itemize}
+
+\end{column}
+\begin{column}{0.5\textwidth}
+%presentation of the GLC
+  \begin{figure}[h]
+ % \scalebox{0.5}{\input{figures/lcg-oa1.tex}}
+  %\hfill
+  \scalebox{0.3}{\input{figures/lcg-oa2.tex}}
+  \hfill
+  \scalebox{0.3}{\input{figures/lcg-ua.tex}}
+  \caption{\tiny
+  (left) \tval{OA($\state{a_1,b_0,c_1}$,$a_2$)}  
+  (right) \tval{UA($\state{a_0,b_1,c_1}$,$a_2$)} 
+  }
+  \end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+\end{comment}
+

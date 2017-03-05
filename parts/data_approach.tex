@@ -1,0 +1,53 @@
+
+%\usepackage{tikz}
+
+
+\begin{frame}[c]
+\frametitle{Approach, tools and methods}
+\begin{tikzpicture}[grn]
+
+ % placement des noeuds
+ 
+  \node[block,align=center] (rstc) at (-2,5) {\begin{tabular}{c}
+                                            \textbf{Biological network} \\ \hline
+                                            RSTC network
+                                           \end{tabular}};
+  
+  \node[block] (data) at (4,5) {\begin{tabular}{c}
+                                            \textbf{Experimental Data} \\ \hline
+                                            Time series data(TSD)
+                                           \end{tabular}};
+  
+ \node[instruct,align=center] (phmodel) at (-2,2.5) {\begin{tabular}{c}
+                                            \textbf{Hybrid Model} \\ \hline
+                                            AN Model
+                                           \end{tabular}};
+                                           
+  \node[instruct] (estimation) at (2.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Estimation of parameters}\\ \hline
+                                            $r$ and $sa$ 
+                                           \end{tabular}};
+                                           
+   
+  \node[instruct] (discretization) at (6.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Discretization} \\ \hline
+                                            TSD
+                                           \end{tabular}};
+                                           
+  \node[instruct] (simulation) at (-2,0) {\textbf{Simulation}};
+    
+  
+  \node[test] (test) at (3,0) {Model validation};
+  
+ %placement des arrêtes
+  \draw[suite] (rstc) --node[inner,left]{1} (phmodel);
+  \draw[suite] (phmodel) --node[inner,left]{4} (simulation);
+  \draw[suite] (simulation) --node[inner,above]{5} (test.west);
+  
+  \draw[suite] (data) --node[inner,left]{2} (estimation);
+  \draw[suite] (estimation) --node[inner,above]{3} (phmodel);
+  \draw[suite] (data) --node[inner,left,node distance=5mm]{2'} (discretization);
+  \draw[suite] (discretization) --node[inner,left,node distance=1cm]{5} (test.east);
+\end{tikzpicture}
+
+\end{frame}

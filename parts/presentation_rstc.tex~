@@ -1,0 +1,11 @@
+\begin{frame}
+\frametitle{Biological Networks Modelling}
+%une figure pour présenter
+
+\begin{itemize}
+ \item Pathway Interaction Database
+ \item \tval{$293$  nodes}: signaling proteins, transcription factors, mRNA expression
+ \item \tval{$375$  interactions}: activations, inibitions, complexes dissociation
+\end{itemize}
+
+\end{frame}

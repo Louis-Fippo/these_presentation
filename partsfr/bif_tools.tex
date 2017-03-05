@@ -1,0 +1,26 @@
+\begin{frame}[c]
+ \frametitle{Static analysis by abstract interpretation}
+\framesubtitle{concepts and tools}
+ 
+\begin{align*}
+\text{\iI}\enspace&\neg \OA{s_u}{g_1}&
+\text{\iII}\enspace&\UA{s_b}{g_1}&
+\begin{split}
+\text{\iIIIa}\enspace&s_b\in\unf(s_0)\\
+\text{\iIIIb}\enspace&\UA{s_0}{s_b}
+\end{split}
+\end{align*}
+where $\unf(s_0)$ is the set of all reachable states from $s_0$ represented as the prefix of the
+unfolding of the AN which has to be pre-computed (\secref{unf}).
+Either \iIIIa or \iIIIb can be used, at discretion.
+From $\fOA$ and $\fUA$ properties (\secref{approx}), we directly obtain:
+\begin{align*}
+\text{\iI}&\Rightarrow\text{\cI}&
+\text{\iII}&\Rightarrow\text{\cII}&
+\begin{split}
+\text{\iIIIa}&\Leftrightarrow\text{\cIII}\\
+\text{\iIIIb}&\Rightarrow\text{\cIII}
+\end{split}
+\end{align*}
+
+\end{frame}

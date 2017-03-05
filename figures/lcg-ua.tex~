@@ -1,0 +1,51 @@
+
+\begin{tikzpicture}[>={Stealth[width=3mm,length=3mm]},line join=bevel,font=\Large]
+%%
+\node (a_2) at (140.6bp,550.0bp) [draw,rectangle] {$a_2$};
+  \node (a_0) at (28.597bp,133.0bp) [draw,rectangle] {$a_0$};
+  \node (c_0) at (178.6bp,320.0bp) [draw,rectangle] {$c_0$};
+  \node (O_b_1_0) at (28.597bp,248.0bp)  {$\anobj b 1 0$};
+  \node (O_c_1_0) at (178.6bp,248.0bp)  {$\anobj c 1 0$};
+  \node (b_0) at (103.6bp,320.0bp) [draw,rectangle] {$b_0$};
+  \node (b_1) at (178.6bp,133.0bp) [draw,rectangle] {$b_1$};
+  \node (O_b_0_1) at (140.6bp,61.0bp)  {$\anobj b 0 1$};
+  \node (O_b_0_0) at (103.6bp,248.0bp)  {$\anobj b 0 0$};
+  \node (pintsol8) at (215.6bp,3.5bp) [draw,ellipse] {};
+  \node (pintsync1) at (140.6bp,377.5bp) [draw,regular polygon, regular polygon sides=4] {};
+  \node (pintsol5) at (28.597bp,190.5bp) [draw,ellipse] {};
+  \node (pintsol4) at (140.6bp,3.5bp) [draw,ellipse] {};
+  \node (pintsol7) at (253.6bp,190.5bp) [draw,ellipse] {};
+  \node (pintsol6) at (178.6bp,190.5bp) [draw,ellipse] {};
+  \node (pintsol1) at (28.597bp,3.5bp) [draw,ellipse] {};
+  \node (pintsol3) at (103.6bp,190.5bp) [draw,ellipse] {};
+  \node (pintsol2) at (140.6bp,420.5bp) [draw,ellipse] {};
+  \node (O_a_0_0) at (28.597bp,61.0bp)  {$\anobj a 0 0$};
+  \node (b00) at (215.6bp,61.0bp)  {$\anobj b 1 1$};
+  \node (c00) at (253.6bp,248.0bp)  {$\anobj c 0 0$};
+  \node (O_a_0_2) at (140.6bp,478.0bp)  {$\anobj a 0 2$};
+  \node (root) at (140.6bp,622.0bp) [draw,draw=none] {root};
+  \draw [->] (root) ..controls (140.6bp,595.98bp) and (140.6bp,586.71bp)  .. (a_2);
+  \draw [->] (b_1) ..controls (192.06bp,106.52bp) and (197.31bp,96.603bp)  .. (b00);
+  \draw [->] (pintsol5) ..controls (28.597bp,182.05bp) and (28.597bp,171.59bp)  .. (a_0);
+  \draw [->] (O_c_1_0) ..controls (178.6bp,221.59bp) and (178.6bp,212.02bp)  .. (pintsol6);
+  \draw [->] (b_0) ..controls (74.866bp,292.18bp) and (62.137bp,280.3bp)  .. (O_b_1_0);
+  \draw [->] (O_b_1_0) ..controls (28.597bp,221.59bp) and (28.597bp,212.02bp)  .. (pintsol5);
+  \draw [->] (a_2) ..controls (140.6bp,523.98bp) and (140.6bp,514.71bp)  .. (O_a_0_2);
+  \draw [->] (b_0) ..controls (103.6bp,293.98bp) and (103.6bp,284.71bp)  .. (O_b_0_0);
+  \draw [->] (b_1) ..controls (164.7bp,106.4bp) and (159.22bp,96.311bp)  .. (O_b_0_1);
+  \draw [->] (c_0) ..controls (178.6bp,293.98bp) and (178.6bp,284.71bp)  .. (O_c_1_0);
+  \draw [->] (O_b_0_0) ..controls (103.6bp,221.59bp) and (103.6bp,212.02bp)  .. (pintsol3);
+  \draw [->] (O_a_0_0) ..controls (28.597bp,34.59bp) and (28.597bp,25.018bp)  .. (pintsol1);
+  \draw [->] (pintsol6) ..controls (178.6bp,182.05bp) and (178.6bp,171.59bp)  .. (b_1);
+  \draw [->] (a_0) ..controls (28.597bp,106.98bp) and (28.597bp,97.712bp)  .. (O_a_0_0);
+  \draw [->] (c00) ..controls (253.6bp,221.59bp) and (253.6bp,212.02bp)  .. (pintsol7);
+  \draw [->] (c_0) ..controls (207.33bp,292.18bp) and (220.06bp,280.3bp)  .. (c00);
+  \draw [->] (pintsync1) ..controls (135.46bp,368.8bp) and (127.92bp,357.48bp)  .. (b_0);
+  \draw [->] (pintsync1) ..controls (145.87bp,368.8bp) and (153.62bp,357.48bp)  .. (c_0);
+  \draw [->] (O_b_0_1) ..controls (140.6bp,34.59bp) and (140.6bp,25.018bp)  .. (pintsol4);
+  \draw [->] (O_a_0_2) ..controls (140.6bp,451.59bp) and (140.6bp,442.02bp)  .. (pintsol2);
+  \draw [->] (b00) ..controls (215.6bp,34.59bp) and (215.6bp,25.018bp)  .. (pintsol8);
+  \draw [->] (pintsol2) ..controls (140.6bp,411.71bp) and (140.6bp,400.36bp)  .. (pintsync1);
+%
+\end{tikzpicture}
+

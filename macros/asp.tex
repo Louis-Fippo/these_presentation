@@ -1,0 +1,28 @@
+
+\lstset{mathescape}
+
+% **** ASP language ***
+\usepackage{listings}
+\lstdefinelanguage{ASP}{%
+literate={:-}{$\leftarrow$}1,
+morekeywords={not},
+numbers=left,
+escapeinside={\%}{\^^M}
+}
+% Définition des styles de tous les listings du document
+\lstset{
+language=ASP,
+basicstyle=\small\ttfamily,
+columns=fullflexible,
+keywordstyle=\bfseries,
+firstnumber=last,
+keepspaces=true,
+numbersep=2pt,
+numberstyle=\tiny\color{darkgray},
+}
+\renewcommand{\thelstnumber}{\the\value{lstnumber}}
+
+% Styles ASP inline
+\newcommand{\ASPnot}{\textbf{not}~}
+
+

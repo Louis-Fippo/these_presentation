@@ -1,0 +1,158 @@
+\beamer@endinputifotherversion {3.33pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
+\headcommand {\beamer@sectionpages {1}{1}}
+\headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\slideentry {1}{0}{2}{2/9}{}{0}}
+\headcommand {\beamer@framepages {2}{9}}
+\headcommand {\slideentry {1}{0}{3}{10/10}{}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\sectionentry {2}{\'Etat de l'art}{11}{\'Etat de l'art}{0}}
+\headcommand {\beamer@sectionpages {2}{10}}
+\headcommand {\beamer@subsectionpages {2}{10}}
+\headcommand {\slideentry {2}{0}{4}{11/11}{}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {2}{0}{5}{12/12}{}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\sectionentry {3}{Contributions}{13}{Contributions}{0}}
+\headcommand {\beamer@sectionpages {11}{12}}
+\headcommand {\beamer@subsectionpages {11}{12}}
+\headcommand {\slideentry {3}{0}{6}{13/16}{}{0}}
+\headcommand {\beamer@framepages {13}{16}}
+\headcommand {\slideentry {3}{0}{7}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {3}{0}{8}{18/22}{}{0}}
+\headcommand {\beamer@framepages {18}{22}}
+\headcommand {\slideentry {3}{0}{9}{23/23}{}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{24}{Les r\IeC {\'e}seaux d'automates}}\headcommand {\beamer@subsectionpages {13}{23}}
+\headcommand {\slideentry {3}{1}{1}{24/32}{Les r\IeC {\'e}seaux d'automates}{0}}
+\headcommand {\beamer@framepages {24}{32}}
+\headcommand {\slideentry {3}{1}{2}{33/33}{Les r\IeC {\'e}seaux d'automates}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{34}{Les r\IeC {\'e}seaux d'automates stochastiques}}\headcommand {\beamer@subsectionpages {24}{33}}
+\headcommand {\slideentry {3}{2}{1}{34/34}{Les r\IeC {\'e}seaux d'automates stochastiques}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {3}{2}{2}{35/36}{Les r\IeC {\'e}seaux d'automates stochastiques}{0}}
+\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\sectionentry {4}{Raffinement de la dynamique par int\IeC {\'e}gration des s\IeC {\'e}ries temporelles}{37}{Raffinement de la dynamique par int\IeC {\'e}gration des s\IeC {\'e}ries temporelles}{0}}
+\headcommand {\beamer@sectionpages {13}{36}}
+\headcommand {\beamer@subsectionpages {34}{36}}
+\headcommand {\slideentry {4}{0}{3}{37/38}{}{0}}
+\headcommand {\beamer@framepages {37}{38}}
+\headcommand {\slideentry {4}{0}{4}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{40}{Les donn\IeC {\'e}es}}\headcommand {\beamer@subsectionpages {37}{39}}
+\headcommand {\slideentry {4}{1}{1}{40/40}{Les donn\IeC {\'e}es}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {4}{1}{2}{41/41}{Les donn\IeC {\'e}es}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{42}{Formalisation des RSTC comme des r\IeC {\'e}seaux d'automates}}\headcommand {\beamer@subsectionpages {40}{41}}
+\headcommand {\slideentry {4}{2}{1}{42/42}{Formalisation des RSTC comme des r\IeC {\'e}seaux d'automates}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {4}{2}{2}{43/47}{Formalisation des RSTC comme des r\IeC {\'e}seaux d'automates}{0}}
+\headcommand {\beamer@framepages {43}{47}}
+\headcommand {\slideentry {4}{2}{3}{48/57}{Formalisation des RSTC comme des r\IeC {\'e}seaux d'automates}{0}}
+\headcommand {\beamer@framepages {48}{57}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{58}{Estimation et int\IeC {\'e}gration des param\IeC {\`e}tres temporels et stochastiques}}\headcommand {\beamer@subsectionpages {42}{57}}
+\headcommand {\slideentry {4}{3}{1}{58/65}{Estimation et int\IeC {\'e}gration des param\IeC {\`e}tres temporels et stochastiques}{0}}
+\headcommand {\beamer@framepages {58}{65}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{66}{Simulations \& Validation}}\headcommand {\beamer@subsectionpages {58}{65}}
+\headcommand {\slideentry {4}{4}{1}{66/67}{Simulations \& Validation}{0}}
+\headcommand {\beamer@framepages {66}{67}}
+\headcommand {\slideentry {4}{4}{2}{68/68}{Simulations \& Validation}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\slideentry {4}{4}{3}{69/69}{Simulations \& Validation}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\slideentry {4}{4}{4}{70/70}{Simulations \& Validation}{0}}
+\headcommand {\beamer@framepages {70}{70}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{71}{Analyse statistique des traces}}\headcommand {\beamer@subsectionpages {66}{70}}
+\headcommand {\slideentry {4}{5}{1}{71/71}{Analyse statistique des traces}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\slideentry {4}{5}{2}{72/72}{Analyse statistique des traces}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\slideentry {4}{5}{3}{73/73}{Analyse statistique des traces}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\sectionentry {5}{Analyse statique des propri\IeC {\'e}t\IeC {\'e}s quantitatives dans les r\IeC {\'e}seaux d'automates stochastiques}{74}{Analyse statique des propri\IeC {\'e}t\IeC {\'e}s quantitatives dans les r\IeC {\'e}seaux d'automates stochastiques}{0}}
+\headcommand {\beamer@sectionpages {37}{73}}
+\headcommand {\beamer@subsectionpages {71}{73}}
+\headcommand {\slideentry {5}{0}{4}{74/75}{}{0}}
+\headcommand {\beamer@framepages {74}{75}}
+\headcommand {\slideentry {5}{0}{5}{76/76}{}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {5}{0}{6}{77/77}{}{0}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{78}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}}\headcommand {\beamer@subsectionpages {74}{77}}
+\headcommand {\slideentry {5}{1}{1}{78/78}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{0}}
+\headcommand {\beamer@framepages {78}{78}}
+\headcommand {\slideentry {5}{1}{2}{79/79}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{0}}
+\headcommand {\beamer@framepages {79}{79}}
+\headcommand {\slideentry {5}{1}{3}{80/80}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{0}}
+\headcommand {\beamer@framepages {80}{80}}
+\headcommand {\slideentry {5}{1}{4}{81/81}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{0}}
+\headcommand {\beamer@framepages {81}{81}}
+\headcommand {\slideentry {5}{1}{5}{82/82}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{0}}
+\headcommand {\beamer@framepages {82}{82}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{83}{Graphe de Causalit\IeC {\'e} Locale quantifi\IeC {\'e}}}\headcommand {\beamer@subsectionpages {78}{82}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{83}{Estimation de la probabilit\IeC {\'e} et des d\IeC {\'e}lais}}\headcommand {\beamer@subsectionpages {83}{82}}
+\headcommand {\slideentry {5}{3}{1}{83/89}{Estimation de la probabilit\IeC {\'e} et des d\IeC {\'e}lais}{0}}
+\headcommand {\beamer@framepages {83}{89}}
+\headcommand {\slideentry {5}{3}{2}{90/90}{Estimation de la probabilit\IeC {\'e} et des d\IeC {\'e}lais}{0}}
+\headcommand {\beamer@framepages {90}{90}}
+\headcommand {\sectionentry {6}{Analyse statique des bifurcations}{91}{Analyse statique des bifurcations}{0}}
+\headcommand {\beamer@sectionpages {74}{90}}
+\headcommand {\beamer@subsectionpages {83}{90}}
+\headcommand {\slideentry {6}{0}{3}{91/92}{}{0}}
+\headcommand {\beamer@framepages {91}{92}}
+\headcommand {\slideentry {6}{0}{4}{93/93}{}{0}}
+\headcommand {\beamer@framepages {93}{93}}
+\headcommand {\slideentry {6}{0}{5}{94/94}{}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{95}{C'est quoi une bifurcation?}}\headcommand {\beamer@subsectionpages {91}{94}}
+\headcommand {\slideentry {6}{1}{1}{95/95}{C'est quoi une bifurcation?}{0}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\slideentry {6}{1}{2}{96/96}{C'est quoi une bifurcation?}{0}}
+\headcommand {\beamer@framepages {96}{96}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{97}{Comment identifier les bifurcations?}}\headcommand {\beamer@subsectionpages {95}{96}}
+\headcommand {\slideentry {6}{2}{1}{97/97}{Comment identifier les bifurcations?}{0}}
+\headcommand {\beamer@framepages {97}{97}}
+\headcommand {\slideentry {6}{2}{2}{98/102}{Comment identifier les bifurcations?}{0}}
+\headcommand {\beamer@framepages {98}{102}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{103}{Mise en {\oe }uvre \& applications}}\headcommand {\beamer@subsectionpages {97}{102}}
+\headcommand {\slideentry {6}{3}{1}{103/103}{Mise en {\oe }uvre \& applications}{0}}
+\headcommand {\beamer@framepages {103}{103}}
+\headcommand {\beamer@subsectionentry {0}{6}{4}{104}{Applications biologiques de l'identification des bifurcations}}\headcommand {\beamer@subsectionpages {103}{103}}
+\headcommand {\slideentry {6}{4}{1}{104/104}{Applications biologiques de l'identification des bifurcations}{0}}
+\headcommand {\beamer@framepages {104}{104}}
+\headcommand {\slideentry {6}{4}{2}{105/105}{Applications biologiques de l'identification des bifurcations}{0}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\slideentry {6}{4}{3}{106/106}{Applications biologiques de l'identification des bifurcations}{0}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\sectionentry {7}{Conclusions \& Perspectives}{107}{Conclusions \& Perspectives}{0}}
+\headcommand {\beamer@sectionpages {91}{106}}
+\headcommand {\beamer@subsectionpages {104}{106}}
+\headcommand {\slideentry {7}{0}{4}{107/110}{}{0}}
+\headcommand {\beamer@framepages {107}{110}}
+\headcommand {\slideentry {7}{0}{5}{111/114}{}{0}}
+\headcommand {\beamer@framepages {111}{114}}
+\headcommand {\slideentry {7}{0}{6}{115/115}{}{0}}
+\headcommand {\beamer@framepages {115}{115}}
+\headcommand {\sectionentry {8}{Annexes}{116}{Annexes}{0}}
+\headcommand {\beamer@sectionpages {107}{115}}
+\headcommand {\beamer@subsectionpages {107}{115}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{116}{Sortes de synchronisation}}\headcommand {\beamer@subsectionpages {116}{115}}
+\headcommand {\slideentry {8}{1}{1}{116/116}{Sortes de synchronisation}{0}}
+\headcommand {\beamer@framepages {116}{116}}
+\headcommand {\slideentry {8}{1}{2}{117/131}{Sortes de synchronisation}{0}}
+\headcommand {\beamer@framepages {117}{131}}
+\headcommand {\slideentry {8}{1}{3}{132/132}{Sortes de synchronisation}{0}}
+\headcommand {\beamer@framepages {132}{132}}
+\headcommand {\beamer@subsectionentry {0}{8}{2}{133}{Formules g\IeC {\'e}n\IeC {\'e}rales pour le QGLC}}\headcommand {\beamer@subsectionpages {116}{132}}
+\headcommand {\slideentry {8}{2}{1}{133/136}{Formules g\IeC {\'e}n\IeC {\'e}rales pour le QGLC}{0}}
+\headcommand {\beamer@framepages {133}{136}}
+\headcommand {\beamer@partpages {1}{136}}
+\headcommand {\beamer@subsectionpages {133}{136}}
+\headcommand {\beamer@sectionpages {116}{136}}
+\headcommand {\beamer@documentpages {136}}
+\headcommand {\def \inserttotalframenumber {56}}

@@ -1,0 +1,50 @@
+% Performances et conclusion
+\begin{frame}[c]
+  \frametitle{Conclusions}
+
+%mots clés: large scale
+%bien expliquer les résultats obtenus
+ \textbf{Summary}
+
+
+\tval{Hybrid approach for modelling an RSTC network}
+  \begin{itemize}
+   \item Formalizing biological knowledge: Translation of motifs
+   \item Automatic generation of Process Hitting model
+   \item Inference and integration of temporal parameters
+   \item Validation with discrete time-series data
+  \end{itemize}
+
+\tval{Static analysis of Probability}
+\begin{itemize}
+ \item 
+ \item
+ \item 
+\end{itemize}
+
+
+
+\tval{Identification of Bifurcations}
+ \begin{itemize}
+\item 
+$$
+\left\{
+    \begin{array}{lcl}
+        \mbox{AI (Artificial inteligence)} &\\  %rajouter un signe entre les deux
+        \mbox{+} & \Longrightarrow \mbox{\tval{formal approximation of bifurcations}} \\
+        \mbox{AI (Abstract interpretation)} &
+    \end{array}
+\right.
+$$ 
+   \item Tractable on large networks (compared to model-checking)
+   \item Under-approximation: some bifurcations are not returned.
+   %\item Application on \tval{Phage lambda, EGF/TNF, Th\_differentiation} 
+  \end{itemize}
+\medskip
+
+\end{frame}
+
+%rajouter les slides du titre
+
+
+

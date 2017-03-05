@@ -1,0 +1,106 @@
+\begin{frame}[c]
+ \frametitle{ASP implementation}
+ \framesubtitle{ASP modelling of Automata Networks}
+ 
+\textbf{Declaration of local states, transitions, and states}
+\begin{itemize}
+\item \tval{Local states} : \lstinline|ls($a$,$i$)|.
+\item \tval{Transitions \& conditions} : \lstinline|tr($id$,$a$,$i$,$j$)| and \lstinline|trcond($id$,$b$,$k$)|. 
+($\antrl aij{\{b_k\}\cup\ell}\in\anT$)
+\item \tval{States} : \lstinline|s(ID,A,I)|.
+\item \tval{goal} : \lstinline|goal($g$,$1$)|.
+\end{itemize}
+
+
+\textbf{Example:}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{lstlisting}
+ls(a,0). ls(a,1). ls(a,2).\\
+tr(1,a,1,0).\\
+tr(2,a,0,1). trcond(2,b,0).\\
+tr(3,a,0,2). trcond(3,b,0). trcond(3,c,0).\\
+s(0,a,0). s(0,b,0). s(0,c,0).        goal(a,2).
+\end{lstlisting}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exanaspdef
+\end{tikzpicture}
+}\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{ASP implementation}
+ \framesubtitle{ASP modelling of Reachability}
+
+\textbf{Declaration of $s_b$, $t_b$, and $s_u$} \\
+\vspace{0.1in}
+\begin{lstlisting}
+$1 \{ btr(ID)$ : $tr(ID,\_,\_,\_) \} 1.$\\
+$s(u,A,J)$ :- $btr(ID),tr(ID,A,\_,J).$\\
+$s(u,B,K)$ :- $btr(ID),trcond(ID,B,K).$\\
+$s(b,A,I)$ :- $btr(ID),tr(ID,A,I,\_).$\\
+$s(b,B,K)$ :- $s(u,B,K),btr(ID),tr(ID,A,\_,\_),B!=A.$\\
+\end{lstlisting}
+\vspace{0.1in}
+\textbf{\iIIIa declaration of $s_b\in\unf(s_0)$}\\
+\vspace{0.1in}
+\lstinline|reach($a$,$i$)|  is true if a
+reachable state contains $a_i$.
+Declaring $s_b$ reachable from $s_0$ is done simply as follows:\\
+\vspace{0.1in}
+\begin{lstlisting}
+reach(A,I) :- s(b,A,I).
+\end{lstlisting}
+\vspace{0.1in}
+\end{frame}
+
+\begin{frame}
+\frametitle{ASP implementation}
+ \framesubtitle{ASP modelling of Reachability}
+
+\textbf{\iI declaration of $\neg \OA{s_u}{g_1}$} \\
+\vspace{0.1in}
+\begin{lstlisting}
+:- $oa\_valid(u,ls(G,I)),goal(G,I).$ \\
+\end{lstlisting}
+\vspace{0.1in}
+
+
+\textbf{\iII declaration of $\UA{s_b}{g_1}$}\\
+\vspace{0.1in}
+\begin{lstlisting}
+ua\_lcg(b,root,ls(G,I)) :- goal(G,I).\\
+ctx(b,A,I) :- btr(ID),tr(ID,A,I,\_).\\
+ctx(b,B,K) :- s(u,B,K),btr(ID),tr(ID,A,\_,\_),B!=A.\\
+1 \{ s(b,A,I) : ctx(b,A,I) \} 1 :- ctx(b,A,\_).\\
+\end{lstlisting}
+\vspace{0.1in}
+
+\textbf{\iIIIb declaration of $\UA{s_0}{s_b}$}\\
+\vspace{0.1in}
+\begin{lstlisting}
+ua\_lcg(0,root,ls(A,I)) :- s(b,A,I).\\
+ctx(0,A,I) :- s(0,A,I).\\
+\end{lstlisting}
+\vspace{0.1in}
+\end{frame}
+
+
+
+\begin{comment}
+Therefore, our characterization is sound (no false positive) but incomplete: some $t_b$
+might be missed (false negatives).
+Using \iIIIa instead of \iIIIb potentially reduces the false negatives, at the condition that the
+prefix of the unfolding is tractable. When facing a model too large for the unfolding approach, we
+should rely on \iIIIb which is much more scalable but may lead to more false
+negatives.
+
+Relying on the unfolding from $s_b$ ($\unf(s_b)$) is not considered here, as it would require to
+compute a prefix from each $s_b$ candidate, whereas $\unf(s_0)$ is computed only once before the
+bifurcation identification.
+\end{comment}

@@ -1,0 +1,37 @@
+\newcounter{imageZoom}
+\newcounter{imageZoomp}
+ 
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+ 
+\newcommand{\zoomZero}[2][]{
+	\setcounter{imageZoom}{1}
+	\draw (0,0) node[anchor=south west,inner sep=0] (image\theimageZoom) { 
+  			#2
+  	 	};
+}
+ 
+\newcommand{\zoomIn}[4][below]{
+ 	\refstepcounter{imageZoom}
+ 	\setcounter{imageZoomp}{\value{imageZoom}}
+ 	\addtocounter{imageZoomp}{-1}
+	\begin{scope}[shift=(image\theimageZoomp.south west),x={(image\theimageZoomp.south east)},y={(image\theimageZoomp.north west)}]
+		%\draw [step=0.05,gray,very thin] (0,0) grid (1,1);
+		\node[inner sep=0,anchor=center] (rectanglebg\theimageZoomp) at (#3){};
+		\node[inner sep=0,anchor=center] (rectanglehd\theimageZoomp) at ($(rectanglebg\theimageZoomp)+(#4)$){};
+		\node[inner sep=0,anchor=center] (rectanglebd\theimageZoomp) at (rectanglehd\theimageZoomp |- rectanglebg\theimageZoomp){};
+		\node[inner sep=0,anchor=center] (rectanglehg\theimageZoomp) at (rectanglehd\theimageZoomp -| rectanglebg\theimageZoomp){};
+		\draw (#3) rectangle +(#4);
+ 	\end{scope}
+ 	\draw (0,0) node[anchor=north west,inner sep=0,#1=of image\theimageZoomp] (image\theimageZoom) {
+		\phantom{#2}
+	};
+	\draw  (rectanglebg\theimageZoomp.center) -- (image\theimageZoom.south west);		
+	\draw  (rectanglebd\theimageZoomp.center) -- (image\theimageZoom.south east);		
+	\draw  (rectanglehd\theimageZoomp.center) -- (image\theimageZoom.north east);		
+	\draw  (rectanglehg\theimageZoomp.center) -- (image\theimageZoom.north west);
+	\draw (0,0) node[anchor=north west,inner sep=0,#1=of image\theimageZoomp]  {
+		#2
+	};
+	\draw (image\theimageZoom.south west) rectangle (image\theimageZoom.north east);
+}

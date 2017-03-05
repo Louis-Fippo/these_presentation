@@ -1,0 +1,40 @@
+% Performances et conclusion
+\begin{frame}[c]
+  \frametitle{Conclusions \& Perspectives}
+
+%mots clés: large scale
+%bien expliquer les résultats obtenus
+ \textbf{Summary}
+ \begin{itemize}
+\item 
+$$
+\left\{
+    \begin{array}{lcl}
+        \mbox{AI (Artificial inteligence)} &\\  %rajouter un signe entre les deux
+        \mbox{+} & $\Longrightarrow$ \mbox{\tval{formal approximation of bifurcations}} \\
+        \mbox{AI (Abstract interpretation)} &
+    \end{array}
+\right.
+$$ 
+   \item Tractable on large networks (compared to model-checking)
+   \item Under-approximation: some bifurcations are not returned.
+   %\item Application on \tval{Phage lambda, EGF/TNF, Th\_differentiation} 
+  \end{itemize}
+\medskip
+\textbf{Perspectives}
+ \begin{itemize}
+%parler d'améliorer les conditions initiales
+  \item Over-approximation of bifurcations
+  %\item Frame the number of attractors
+  \item Use bifurcations for the analysis of probability 
+  \item Applications for \tval{predicting targets for cellular reprogramming.}
+  
+ \end{itemize}
+%\medskip
+
+\end{frame}
+
+%rajouter les slides du titre
+
+
+

@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>={Stealth[width=3mm,length=3mm]},line join=bevel,font=\LARGE]
+%%
+  \node (86) at (286.69bp,162.0bp) [reach] {$\langle a_2,b_1,c_0,d_1,e_1\rangle$};
+  \node (406) at (89.692bp,18.0bp) [reach] {$\langle a_2,b_1,c_1,\mathbf{\color{blue}d_2},e_1\rangle$};
+  \node (69) at (483.69bp,306.0bp) [reach] {$s_0=\langle a_1,b_0,c_0,d_1,e_1\rangle$};
+  \node (70) at (286.69bp,234.0bp) [reach] {$\langle a_2,b_0,c_0,d_1,e_1\rangle$};
+  \node (342) at (89.692bp,90.0bp) [reach] {$\langle a_2,b_1,c_1,d_1,e_1\rangle$};
+  \node (326) at (89.692bp,162.0bp) [reach] {$\langle a_2,b_0,c_1,d_1,e_1\rangle$};
+
+\node (22) at (483.69bp,90.0bp)  {$\langle a_2,b_1,c_0,d_0,e_1\rangle$};
+  \node (262) at (286.69bp,90.0bp) {$\langle a_2,b_0,c_1,d_0,e_1\rangle$};
+  \node (5) at (483.69bp,234.0bp) {$\langle a_1,b_0,c_0,d_0,e_1\rangle$};
+  \node (4) at (680.69bp,162.0bp) {$\langle a_0,b_0,c_0,d_0,e_1\rangle$};
+  \node (6) at (483.69bp,162.0bp) {$\langle a_2,b_0,c_0,d_0,e_1\rangle$};
+  \node (278) at (286.69bp,18.0bp) {$\langle a_2,b_1,c_1,d_0,e_1\rangle$};
+  \node (68) at (680.69bp,234.0bp) {$\langle a_0,b_0,c_0,d_1,e_1\rangle$};
+  \draw [->] (5) ..controls (483.69bp,207.98bp) and (483.69bp,198.71bp)  .. (6);
+  \draw [->] (326) ..controls (89.692bp,135.98bp) and (89.692bp,126.71bp)  .. (342);
+  \draw [->] (6) ..controls (411.31bp,135.28bp) and (370.63bp,120.83bp)  .. (262);
+  \draw [->] (5) ..controls (556.08bp,207.28bp) and (596.75bp,192.83bp)  .. (4);
+  \draw [->] (68) ..controls (680.69bp,207.98bp) and (680.69bp,198.71bp)  .. (4);
+  \draw [->] (342) ..controls (89.692bp,63.983bp) and (89.692bp,54.712bp)  .. (406);
+  \draw [->] (86) ..controls (214.31bp,135.28bp) and (173.63bp,120.83bp)  .. (342);
+  \draw [->] (70) ..controls (214.31bp,207.28bp) and (173.63bp,192.83bp)  .. (326);
+  \draw [->] (70) ..controls (286.69bp,207.98bp) and (286.69bp,198.71bp)  .. (86);
+  \draw [->] (262) ..controls (286.69bp,63.983bp) and (286.69bp,54.712bp)  .. (278);
+  \draw [->] (22) ..controls (411.31bp,63.28bp) and (370.63bp,48.827bp)  .. (278);
+  \draw [->] (6) ..controls (483.69bp,135.98bp) and (483.69bp,126.71bp)  .. (22);
+  \draw [->] (69) ..controls (411.31bp,279.28bp) and (370.63bp,264.83bp)  .. (70);
+
+  \path[->,very thick,every node/.style={auto,font=\huge,fill=white},red]
+  	(86) edge node {$t_5$} (22)
+	(69) edge node {$t_5$} (5)
+	(69) edge node {$t_1$} (68)
+	(70) edge node {$t_5$} (6)
+	(342) edge node {$t_5$} (278)
+	(326) edge node {$t_5$} (262)
+	;
+%
+\end{tikzpicture}
+

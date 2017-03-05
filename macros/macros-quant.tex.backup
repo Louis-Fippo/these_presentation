@@ -1,0 +1,81 @@
+\def\Sceq#1#2{\mathbf{Sce}(#1 \reach #2)}
+\def\live#1{\rho (#1)}
+\def\pacc{\mathcal{R}}
+\def\mypropp{\mathcal{P}}
+\def\mypropq{\mathcal{Q}}
+\def\myqprop#1{\mathcal{Q} (#1)}
+\def\condnec{\mathcal{CN}}
+\def\condsuf{\mathcal{CS}}
+\def\liminf#1{\mathsf{linf}_{#1}}
+\def\limsup#1{\mathsf{lsup}_{#1}}
+\def\binf#1{\mathsf{binf}_{#1}}
+\def\bsup#1{\mathsf{bsup}_{#1}}
+\def\mystruct{\mathcal{G}}
+\def\aG{\mathcal{G}}
+\def\myG{\aG^\w_\ctx}
+\def\cwG{\sat{\aG_\ctx^\w}}
+\def\mycwG#1#2{\sat{\aG_{#1}^{#2}}}
+
+\def\san{\mathcal{SAN}}
+\def\an{\mathcal{N}}
+\def\moy{moy}
+\def\Cyc{\mathbf{Cyc}}
+\def\C{\mathcal{C}}
+\def\n{\eta}
+
+%fonction indicatrice
+\def\indica#1{\mathds{1}_{#1}}
+
+
+
+%
+\newcommand{\ANhitter}{\mathsf{frappeur}}
+\newcommand{\ANtarget}{\mathsf{cible}}
+\newcommand{\ANbounce}{\mathsf{bond}}
+\newcommand{\ANinvariant}{\mathsf{invariant}}
+\newcommand{\ANsort}{\mathsf{automate}}
+
+
+\newcommand{\ansort}[1]{\ANsort(#1)}
+\newcommand{\ansorte}{\sort}
+\newcommand{\ANsorts}{\mathsf{automates}}
+\newcommand{\ansortes}[1]{\PHsorts(#1)}
+\newcommand{\ansorts}{\sortes}
+
+\newcommand{\anhitter}[1]{\ANhitter(#1)}
+\newcommand{\antarget}[1]{\ANtarget(#1)}
+\newcommand{\anbounce}[1]{\ANbounce(#1)}
+\newcommand{\anfrappeur}[1]{\ANhitter(#1)}
+\newcommand{\ancible}[1]{\ANtarget(#1)}
+\newcommand{\anbond}[1]{\ANbounce(#1)}
+\newcommand{\aninvariant}[1]{\ANinvariant(#1)}
+
+
+%macros pour les probas dans un glc
+%pour les probas des différents types de noeuds dans le lcg
+\def\GProbObj#1#2#3#4{\Prob{#1_#4,#2,#3} \DEF \Prob{obj_#4} [ \frac{\sum_{#1_{#4-1,i} \in Sol_#4} \Prob{#1_{#4-1,i},#2,#3}}{\card{Sol_#4}} ]}
+\def\GProbSol#1#2#3#4{\Prob{#1_#4,#2,#3} \DEF  \prod_{#1_{#4-1,i} \in LS_#4} \Prob{#1_{#4-1,i},#2,#3} }
+\def\GProbSyn#1#2#3#4{\Prob{#1_#4,#2,#3} \DEF  \prod_{#1_{#4-1,i} \in LS_#4} \Prob{#1_{#4-1,i},#2,#3} }
+\def\GProbLS#1#2#3#4{\Prob{#1_#4,#2,#3} \DEF  \sum_{#1_{#4-1,i} \in Obj_#4} \indica{\ctx} (\antarget{#1_{#4-1}}) \cdot \Prob{#1_{#4-1,i},#2,#3} }
+%\def\PHobjp#1#2#3{\PHobj{{#1}_{#2}}{{#1}_{#3}}}
+\def\tranp#1#2#3{\pi^{#1} (#2,#3)}
+%nouvelle macros pour les probas des objectifs
+\def\GProbObjn#1#2#3#4{\Prob{#1_#4,#2,#3} \DEF \frac{\sum_{#1_{#4-1,i} \in Sol_#4} r_{#4-1} \cdot \Prob{#1_{#4-1,i},#2,#3}}{\sum_{#1_{#4-1,i} \in Sol_#4} r_{#4-1} \cdot \Prob{#1_{#4-1,i},#2,#3}+ } }
+
+
+%macros pour les délais dans un glc
+\def\GTimeObj#1#2#3#4{\Time{#1_#4,#2,#3} \DEF \Time{obj_#4} + [ \moy_{#1_{#4-1,i} \in Sol_#4} \Time{#1_{#4-1,i},#2,#3} ]}
+\def\GTimeSol#1#2#3#4{\Time{#1_#4,#2,#3} \DEF  \moy_{#1_{#4-1,i} \in LS_#4} \Time{#1_{#4-1,i},#2,#3} }
+\def\GTimeSyn#1#2#3#4{\Time{#1_#4,#2,#3} \DEF  \moy_{#1_{#4-1,i} \in LS_#4} \Time{#1_{#4-1,i},#2,#3} }
+\def\GTimeLS#1#2#3#4{\Time{#1_#4,#2,#3} \DEF  \sum_{#1_{#4-1,i} \in Obj_#4} \indica{\ctx} (\antarget{#1_{#4-1}}) \cdot \Time{#1_{#4-1,i},#2,#3} }
+
+
+%macros pour les traces
+\def\tr#1{\mathsf{tr} (#1)}
+\def\Automatet{\mathcal{A}}
+
+%macros pour les motifs valides
+\def\validMotif{\mathsf{validMotif}}
+\def\Nsol{\textbf{Nsol}}
+\def\transup#1{\xrightarrow{#1}}
+

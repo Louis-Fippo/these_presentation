@@ -1,0 +1,57 @@
+%macros pour conditional continous stochastic logic
+
+%Macros definition
+
+\newcommand{\CCSL}{\mathcal{CCSL}}
+
+
+%pour les proba et la syntaxe de CCSL
+\def\Prob#1{\mathcal{P} (#1)}
+\def\Probt#1{\mathcal{P}_t (#1)}
+\def\mymodel{\models}
+\def\myPhi{\Phi}
+\def\myphi{\phi}
+\def\myvarphi{\varphi}
+\def\myPsi{\Psi}
+\def\mypsi{\psi}
+\def\mya{\mathcal{A}} %de trop à enlever plus tard
+\def\myabis{A}
+
+
+\def\tranp#1#2#3{\math{\pi}^{#1} (#2,#3)}
+
+\def\myneg{\neg}
+\def\myvee{\vee}
+\def\mywedge{\wedge}
+\def\myegal{:=}
+\def\mybowtie{\bowtie}
+
+
+\def\dis#1#2{{#1}\myvee{#2}}
+\def\coj#1#2{{#1}\mywedge{#2}}
+
+\def\pp#1#2#3{\mathcal{P}_{{#1}{#2}} (#3)}
+\def\ppp#1#2#3{\mathcal{P}_{{#1}{#2}} (#3 |#3)}
+\def\ppexit#1#2#3{\mathcal{P}_{{(#1},{#2)}} (#3)}
+%\def\PHobjp#1#2#3{\PHobj{{#1}_{#2}}{{#1}_{#3}}}
+
+%\def\myPhical{\mathcal{\Phi}}
+%\def\myphical{\mathcal{\phi}}
+%\def\myvarphical{\mathcal{\varphi}}
+
+%quelques macros pour les proba
+\def\esp#1{\mathbb{E} (#1)} %pour l'espérance mathématique
+\def\myTime{\mathcal{T}}
+\def\Time#1{\mathcal{T} (#1)}
+\def\Timet#1{\mathcal{T}_t (#1)}
+\def\activ#1{\textbf{Activ} (#1)} %time of process activation
+\def\Card#1{\text{Card} \left( #1 \right)}
+\def\minrate#1#2{min \{\PHr_{#1}^{#2}\}}
+\def\myR{\textbf{R}}
+\def\R#1#2{ \sum_{#1^{'} \in #2} \textbf{R} (#1,#1^{'})}
+\def\RR#1#2#3{ \sum_{#1 \in #2} \textbf{R} (#1,#3)}
+
+\def\mysomlambda{\sum_{r \in R_{s}} r}
+\def\ri{\pi (\PHt (\hitter(h) \in s)}
+\def\myrfs#1#2{ \{\pi (\PHt (#1)) / \hitter{#1} \in #2 \}}
+

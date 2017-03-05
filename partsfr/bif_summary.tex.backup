@@ -1,0 +1,25 @@
+\begin{frame}[c]
+  \frametitle{Synthèse sur l'identification des bifurcations}
+
+%mots clés: large scale
+%bien expliquer les résultats obtenus
+% \textbf{Summary}
+
+%\pause
+\tval{Approximation formelle des états et transitions de bifurcation}
+\textbf{Interprétation abstraite des scénarios}
+  \begin{itemize}
+   \item Causalité locale quantitative.
+   \item Graphe de causalité locale quantifié.
+  \end{itemize}
+\medskip
+\textbf{Application sur des modèles biologiques réels}
+\begin{itemize}
+ \item 
+ \item Choix des scénarios.
+\end{itemize}
+\medskip
+\textbf{Intérêt:}
+
+
+\end{frame}

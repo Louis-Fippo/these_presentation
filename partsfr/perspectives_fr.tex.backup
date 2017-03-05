@@ -1,0 +1,51 @@
+\begin{frame}
+ \frametitle{Perspectives}
+ 
+ \textbf{Simulation stochastique \& de l'analyse statique des traces}
+ \begin{itemize}
+  \item Analyse statistique qui prenne en compte le temps.
+  \item Utilisation des règles d'associations pour identifier les relations non encore connues.
+ \end{itemize}
+
+ 
+ \textbf{Static analysis of probability}
+ \begin{itemize}
+  \item Implementation (in progress...) of a static analyzer for properties in  CCSL Logic
+  \item Static analysis of long run behaviors (steady state)
+  \item Static analysis of parametric models
+ \end{itemize}
+
+ 
+ \textbf{Identification of Bifurcations}
+ \begin{itemize}
+%parler d'améliorer les conditions initiales
+  \item Over-approximation of bifurcations
+  %\item Frame the number of attractors
+  \item Use bifurcations for the analysis of probability 
+  \item Applications for \tval{predicting targets for cellular reprogramming.}
+  
+ \end{itemize}
+%\medskip
+
+ 
+ 
+%  \begin{block}{Formal verification of quantitative properties and key process (in progress)}
+%   \begin{itemize}
+%    \item Static analysis of quantitative properties of reachability in Asynchronous automata networks
+%    \item Logical verification and key processes detection
+%    \item Experimental validation of in silico hypotesis
+%    %\item Integrate de likelihood in the parameters estimation procedure.
+%   \end{itemize}
+% 
+%  \end{block}
+%  
+%  \begin{block}{Association rules and traces in automata networks}
+%   \begin{itemize}
+%    \item Association rules for discovering interesting relations between local states. 
+%    \item Experimental validation of in silico hypotesis
+%   \end{itemize}
+% 
+%  \end{block}
+ 
+\end{frame}
+

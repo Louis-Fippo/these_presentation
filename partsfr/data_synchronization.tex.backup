@@ -1,0 +1,50 @@
+\begin{frame}
+ \frametitle{Sortes de synchronization}
+ 
+ \begin{tabular}{|cc|}
+\hline
+\textbf{Motifs biologiques}
+
+\\ \hline
+
+\begin{tikzpicture}
+\node[scale=0.7] (sai1) at (0,0){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,3);
+\node[qgre] (a) at (0,2) {a};
+\node[mod] (i) at (1,1) {i};
+\node[qgre] (b) at (0,0) {b};
+\node[qgre] (c) at (2,1) {c};
+\node[es] (d) at (1,2.5) {activation ou inhibition};
+
+% arestorer
+\path
+ (a) edge[act] (i)
+ (b) edge[act] (i)
+ (i) edge[st]  (c);
+\end{tikzpicture}};
+\end{tikzpicture}
+
+
+&
+
+\begin{tikzpicture}
+\node[scale=0.7] (sai1) at (0,0){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,3);
+\node[qgre] (a) at (0,2) {a};
+\node[mod] (i) at (1,1) {i};
+\node[qgre] (b) at (0,0) {b};
+\node[qgre] (c) at (2,1) {c};
+\node[es] (d) at (1,2.5) {activation ou inhibition};
+
+% arestorer
+\path
+ (a) edge[inh] (i)
+ (b) edge[inh] (i)
+ (i) edge[st]  (c);
+\end{tikzpicture}};
+\end{tikzpicture}
+
+\\ \hline
+
+\end{tabular}
+\end{frame}

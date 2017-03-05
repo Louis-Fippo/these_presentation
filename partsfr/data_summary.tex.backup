@@ -1,0 +1,30 @@
+\begin{frame}[c]
+  \frametitle{Synthèse sur l'intégration des données}
+
+%mots clés: large scale
+%bien expliquer les résultats obtenus
+% \textbf{Summary}
+
+%\pause
+\tval{Modélisation hybride des réseaux RSTC}\\
+\medskip
+\textbf{Formalisation des connaissances biologiques}
+  \begin{itemize}
+   \item Identification des motifs minimaux dans les RSTC. 
+   \item Raffinement structurel de la dynamique avec des automates de synchronisation.
+  \end{itemize}
+\medskip
+\textbf{Intégration des paramètres temporels et stochastiques}
+\begin{itemize}
+ \item Inférence des paramètres des données de séries temporelles.
+ \item Raffinement quantitatif de la dynamique.
+\end{itemize}
+\medskip
+\textbf{Simulation \& validation}
+\begin{itemize}
+ \item Simulation stochastique sur des modèles biologiques réels.
+ \item Analyse statistique des traces des simulations.
+\end{itemize}
+\tcitebullet Louis Fippo Fitime, Christian Schuster, Morgan Magnin, Olivier Roux. \tscite{Under-approximation of Reachability in Multivalued Asynchronous Networks}. In E. Merelli and A. Troina, editors, \textit{4th International Workshop on Interactions between Computer Science and Biology (CS2Bio'13)}, Electronic Notes in Theoretical Computer Science, Volume 299, 33--51. June 2013.
+
+\end{frame}

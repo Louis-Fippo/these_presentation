@@ -1,0 +1,144 @@
+
+\begin{frame}[c]
+\frametitle{General scheme for identification of bifurcation}
+\framesubtitle{concepts and tools}
+
+\begin{figure}[t]
+%\centering
+\scalebox{0.4}{
+\begin{tikzpicture}[node distance=1.5cm,left]
+\node (s0) [circle,fill=gray!60] {$s_0$};
+\node (sb) [circle,fill=gray!60,above right of=s0,xshift=2cm] {$s_b$};
+\node (g) [circle,fill=blue!20,minimum width=7mm,below right of=sb,xshift=2cm] {$S_{g_1}$};
+\node (su) [above right of=sb] {$s_u$};
+\node (u) [below right of=su,xshift=5mm] {$\mathbf{\color{red}x}$};
+\path[->] (sb) edge[->,red,thick] node[auto] {$t_b$} (su) ;
+\path[->,bend left=20,densely dashed]
+	(s0) edge (sb)
+	(sb) edge (g)
+	(s0) edge [bend right=10] (g)
+	(su) edge[>={Rays[length=3mm,width=3mm]}] (u)
+;
+\end{tikzpicture}
+}
+\end{figure}
+
+{\color{magenta}{\#}}: sufficient conditions.
+\pause
+\begin{align*}
+\text{\cI}\enspace &s_b\play t_b\nreach g_1
+&
+\text{\iI}\enspace&\neg \OA{s_u}{g_1}
+&
+\text{\iI}&\Rightarrow\text{\cI}
+\end{align*}
+
+%rajouter sufficient condition/ précisier ce que veut dire sharp
+%remplacer unf-prefix par reach.
+\pause
+\begin{align*}
+\text{\cII}\enspace &s_b\reach g_1
+&
+\text{\iII}\enspace&\UA{s_b}{g_1}
+&
+\text{\iII}&\Rightarrow\text{\cII}
+\end{align*}
+
+\pause
+\begin{align*}
+\text{\cIII}\enspace &s_0\reach s_b
+&
+\begin{split}
+\text{\iIIIa}\enspace&s_b\in\freach(s_0)\\
+\text{\iIIIb}\enspace&\UA{s_0}{s_b}
+\end{split}
+&
+\begin{split}
+\text{\iIIIa}&\Leftrightarrow\text{\cIII}\\
+\text{\iIIIb}&\Rightarrow\text{\cIII}
+\end{split}
+\end{align*}
+
+\pause
+\begin{align*}
+\text{\iI} \ and\ \text{\iII}\ and \ (\text{\iIIIa} or \text{\iIIIb}) \ \Rightarrow t_b\ is\ a\ bifurcation.
+\end{align*}
+
+%{\color{magenta}{\#}}: sufficient conditions.
+\end{frame}
+
+\begin{frame}[c]
+\frametitle{Implementation}
+%\framesubtitle{Local Causality Graph}
+\textbf{Formal approximation of reachability}
+\begin{itemize}
+\item Analysis of local causality of transitions
+\item Computation of a so called \tval{Local Causality Graph}
+\item OA/UA: particular patterns in LCG
+\item LCG size: poly(\#automata),exp(|single automaton|)
+\end{itemize}
+\bigskip
+\textbf{ASP implementation}
+\begin{itemize}
+\item Encode NP problem: find $s_b$, $t_b$ such that
+\begin{align*}
+{\color{magenta} \neg \OA{s_b \cdot t_b}{g_1}} \ and\ {\color{magenta}\UA{s_b}{g_1}}\ and \  {\color{magenta}\UA{s_0}{s_b}}
+\end{align*}
+\item enumeration with clingo
+\end{itemize}
+\end{frame}
+
+
+
+\begin{comment}
+\begin{frame}[c]
+ \frametitle{General scheme for identification of bifurcation}
+%\framesubtitle{concepts and tools}
+ 
+%A sound and complete characterization of the local transitions $t_b\in\anT$ triggering a bifurcation
+%from state $s_0$ to the goal $g_1$ would be the following:
+%$t_b$ is a bifurcation transition if and only if there exists a state $s_b\in\anS$ such that
+\begin{align*}
+\text{\cI}\enspace &s_b\play t_b\nreach g_1
+&
+\text{\cII}\enspace &s_b\reach g_1
+&
+\text{\cIII}\enspace &s_0\reach s_b
+\end{align*}
+%where $s_u = s_b\play t_b$, $s \nreach g_1 \EQDEF \forall s'\in\anS, s \reach s' \Rightarrow \get
+%{s'}g\neq g_1$
+%and $s\reach g_1\EQDEF \exists s_g\in\anS: \get{s_g}g = g_1\wedge s\reach s_g$.
+
+%rajouter sufficient condition/ précisier ce que veut dire sharp
+%remplacer unf-prefix par reach.
+
+\begin{align*}
+\text{\iI}\enspace&\neg \OA{s_u}{g_1}&
+\text{\iII}\enspace&\UA{s_b}{g_1}&
+\begin{split}
+\text{\iIIIa}\enspace&s_b\in\unf(s_0)\\
+\text{\iIIIb}\enspace&\UA{s_0}{s_b}
+\end{split}
+\end{align*}
+
+%where $\unf(s_0)$ is the set of all reachable states from $s_0$ represented as the prefix of the
+%unfolding of the AN which has to be pre-computed (\secref{unf}).
+%Either \iIIIa or \iIIIb can be used, at discretion.
+%From $\fOA$ and $\fUA$ properties (\secref{approx}), we directly obtain:
+\begin{align*}
+\text{\iI}&\Rightarrow\text{\cI}&
+\text{\iII}&\Rightarrow\text{\cII}&
+\begin{split}
+\text{\iIIIa}&\Leftrightarrow\text{\cIII}\\
+\text{\iIIIb}&\Rightarrow\text{\cIII}
+\end{split}
+\end{align*}
+
+\begin{align*}
+\text{\iI} \ and\ \text{\iII}\ and \ (\text{\iIIIa} or \text{\iIIIb}) \ \Rightarrow t_b\ is\ a\ bifurcation.
+\end{align*}
+
+\end{frame}
+\end{comment}
+
+

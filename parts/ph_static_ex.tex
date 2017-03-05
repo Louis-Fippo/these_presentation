@@ -1,0 +1,66 @@
+% Exemples de structures abstraites (graphes de causalité locale)
+
+\begin{frame}[t]
+  \frametitle{Static analysis of quantitative properties}
+
+\def \tu {3}
+\def \tub {4}
+\def \tuf {5}
+
+\begin{columns}[t]
+\begin{column}{0.48\textwidth}
+\begin{center}
+\scalebox{0.55}{
+\begin{tikzpicture}
+\exattnew
+\TState{-\tu}{a_0,b_0,bs_0,c_1,d_0,e_1}
+\TState{\tub-}{a_1,b_0,bs_1,c_1,d_1,e_1}
+\node[process,very thick] (d_2) at (d_2.center) {?};
+\end{tikzpicture}
+}
+\end{center}
+
+\end{column}
+\begin{column}{0.52\textwidth}
+
+\uncover<2->{
+%\vspace{1em}
+\tval{Tools:}
+
+\smallskip
+\begin{itemize}
+  \item \tval{$CCSL$}(Conditional Continous Stochastic Logic) (Gao et al.,2013)
+  \item at each step, define a probability mesure $\Rightarrow $ \tval{Probabilistic Semantics}
+\end{itemize}
+
+%il y a de la place ici 
+\begin{center}
+ The probability is at least $0.1$, that the number of proteins is more than $5$
+ and the gene becomes inactive within time interval $[10,20)$, under the condition that the
+ proteins increasingly accumulated from $0$ to k within the same time interval $[10,20)$
+\tval{$Pr_{\geq 0.1}(\Diamond_{[10,20)} f \wedge  g | f_{1} U_{[10,20)} f_{2} U_{[10,20)} \ldots f_{k} )$}
+\end{center}
+
+}
+
+\end{column}
+\end{columns}
+
+\begin{center}%
+\scalebox{\scaleex}{%
+\only<-\tu>{%
+\scalebox{\scaleex}{%
+\begin{tikzpicture}[aS]
+  \path[use as bounding box] (.7,0) rectangle (5.8,3.5);
+
+  \glclegend{}{$d_2$}{$\PHobj{d_0}{d_2}$}
+\end{tikzpicture}
+}
+%~~~\sauyes
+~~~\sasaquant
+}
+\only<\tub->{
+  \sasaquant
+}}
+\end{center}
+\end{frame}

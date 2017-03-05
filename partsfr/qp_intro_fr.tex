@@ -1,0 +1,44 @@
+
+\begin{frame}
+\frametitle{SAN abstraits comme CTMC}
+\begin{columns}
+ \begin{column}{0.5\textwidth}
+ \begin{figure}[p]
+\centering
+\scalebox{0.25}{
+\input{figures/sg-example2-rate.pgf}
+}
+
+\label{ex-bifurcations}
+\end{figure}
+Inconvénient: \textcolor{red}{explosion de l'espace d'états.}
+  
+ \end{column}
+ 
+ \begin{column}{0.5\textwidth}
+  \textbf{La probabilité d'effectuer une transition depuis l'état s:}
+  $$\ppexit{s}{*}{t} = 1-e^{-\lambda t}$$ \\
+  \medskip
+  \textbf{Probabilité d'effectuer une transition de s à s':}
+  $$\ppexit{s}{s^{'}}{t} = \frac{R (s,s^{'})}{E (s)} \cdot \ppexit{s}{*}{t}$$\\
+  \medskip
+  \textbf{Probabilité d'effectuer une transition de s à un ensemble d'états:}
+  $$\ppexit{s}{A}{t} = \frac{R (s,A)}{E (s)} \cdot \ppexit{s}{*}{t}$$ \\
+ \end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{SAN abstraits comme CTMC}
+\begin{figure}[p]
+\centering
+\scalebox{0.4}{
+\input{figures/sg-example2-rate.pgf}
+}
+
+\label{ex-bifurcations}
+\end{figure}
+Inconvénient: \textcolor{red}{explosion de l'espace d'états.}
+\end{frame}

@@ -1,0 +1,230 @@
+% Bibliographie
+
+\begin{frame}[c]
+  \frametitle{Bibliography}
+
+\footnotesize
+\setlength{\parindent}{-1em}
+\setlength{\parskip}{0.5em}
+~
+
+\vfill
+%\tcite{Paulevé11} Loïc Paulevé. PhD thesis: \textit{Modélisation, Simulation et Vérification des Grands Réseaux de Régulation Biologique}, October 2011, Nantes, France
+
+\tcite{Paulev\'e et al. 2010} Loïc Paulevé, Morgan Magnin, and Olivier Roux. \textit{Tuning Temporal Features within the Stochastic $\pi$-Calculus}. IEEE Transactions on Software Engineering, 37(6):858-871, 2011.
+
+%\tcite{PRM10-TCSB} Loïc Paulevé, Morgan Magnin, and Olivier Roux. \textit{Refining dynamics of gene regulatory networks in a stochastic $\pi$-calculus framework}. In Corrado Priami, Ralph-Johan Back, Ion Petre, and Erik de Vink, editors: Transactions on Computational Systems Biology XIII, volume 6575 of Lecture Notes in Computer Science, 171-191. Springer Berlin/Heidelberg, 2011.
+
+\tcite{Paulev\'e et al. 2012} Loïc Paulevé, Morgan Magnin, and Olivier Roux. \textit{Static analysis of biological regulatory networks dynamics using abstract interpretation}. Mathematical Structures in Computer Science, in press, 2012.
+
+%\tcite{PR10-CRAS} Loïc Paulevé and Adrien Richard. \textit{Topological Fixed Points in Boolean Networks}. Comptes Rendus de l'Académie des Sciences - Series I - Mathematics, 348(15-16):825 - 828, 2010.
+
+\tcite{Richard et al. 2008} Adrien Richard, Jean-Paul Comet, and Gilles Bernot. \textit{R. Thomas' logical method}, 2008. Invited at Tutorials on modelling methods and tools: Modelling a genetic switch and Metabolic Networks, Spring School on Modelling Complex Biological Systems in the Context of Genomics.
+
+%\tcite{CMSB12} Maxime Folschette, Loïc Paulevé, Katsumi Inoue, Morgan Magnin, and Olivier Roux. \textit{Concretizing the Process Hitting into Biological Regulatory Networks}. In: Computational Methods in Systems Biology, Springer, 2012.
+
+
+
+
+\tcite{Ahmad et al. 2008}
+Jamil Ahmad, Olivier Roux, Gilles Bernot, Jean-Paul Comet, and Adrien Richard.
+\textit{Analysing formal models of genetic regulatory networks with delays.}
+ International Journal of Bioinformatics Research and
+  Applications (IJBRA), 4(3):240--262, 2008.
+
+\bibitem{AMSW2012}
+David~Spieler Aleksandr~Andreychenko, Linar~Mikeev and Verena Wolf.
+\newblock Approximate maximum likelihood estimation for stochastic chemical
+  kinetics.
+\newblock {\em EURASIP Journal on Bioinformatics and Systems Biology}.
+
+\bibitem{Batt15092010}
+Gregory Batt, Michel Page, Irene Cantone, Gregor Goessler, Pedro Monteiro, and
+  Hidde de~Jong.
+\newblock Efficient parameter search for qualitative models of regulatory
+  networks using symbolic model checking.
+\newblock {\em Bioinformatics}, 26(18):i603--i610, 2010.
+
+\bibitem{batt2007timed}
+Gr{\'e}gory Batt, Ramzi~Ben Salah, and Oded Maler.
+\newblock {\em On timed models of gene networks}.
+\newblock Springer, 2007.
+
+\bibitem{busch2008gene}
+Hauke Busch, David Camacho-Trullio, Zbigniew Rogon, Kai Breuhahn, Peter Angel,
+  Roland Eils, and Axel Szabowski.
+\newblock Gene network dynamics controlling keratinocyte migration.
+\newblock {\em Molecular systems biology}, 4(1):199, 2008.
+
+\bibitem{chaouiya2003qualitative}
+Claudine Chaouiya, Elisabeth Remy, Brigitte Moss{\'e}, and Denis Thieffry.
+\newblock Qualitative analysis of regulatory graphs: a computational tool based
+  on a discrete formal framework.
+\newblock In {\em Positive Systems}, pages 119--126. Springer, 2003.
+
+\bibitem{de2003genetic}
+Hidde De~Jong, Johannes Geiselmann, C{\'e}line Hernandez, and Michel Page.
+\newblock Genetic network analyzer: qualitative simulation of genetic
+  regulatory networks.
+\newblock {\em Bioinformatics}, 19(3):336--344, 2003.
+
+\bibitem{gardner2003inferring}
+Timothy~S Gardner, Diego Di~Bernardo, David Lorenz, and James~J Collins.
+\newblock Inferring genetic networks and identifying compound mode of action
+  via expression profiling.
+\newblock {\em Science}, 301(5629):102--105, 2003.
+
+\bibitem{guziolowski2012automatic}
+Carito Guziolowski, Aristotelis Kittas, Florian Dittmann, and Niels Grabe.
+\newblock Automatic generation of causal networks linking growth factor stimuli
+  to functional cell state changes.
+\newblock {\em FEBS Journal}, 279(18):3462--3474, 2012.
+
+\bibitem{guziolowski2013exhaustively}
+Carito Guziolowski, Santiago Videla, Federica Eduati, Sven Thiele, Thomas
+  Cokelaer, Anne Siegel, and Julio Saez-Rodriguez.
+\newblock Exhaustively characterizing feasible logic models of a signaling
+  network using answer set programming.
+\newblock {\em Bioinformatics}, 29(18):2320--2326, 2013.
+
+\bibitem{heiner2008petri}
+Monika Heiner, David Gilbert, and Robin Donaldson.
+\newblock Petri nets for systems and synthetic biology.
+\newblock In {\em Formal methods for computational systems biology}, pages
+  215--264. Springer, 2008.
+
+\bibitem{kauffman1969metabolic}
+Stuart~A Kauffman.
+\newblock Metabolic stability and epigenesis in randomly constructed genetic
+  nets.
+\newblock {\em Journal of theoretical biology}, 22(3):437--467, 1969.
+
+\bibitem{Kolly2005}
+C.~Kolly, M.~M. Suter, and E.~J. Muller.
+\newblock {{P}roliferation, cell cycle exit, and onset of terminal
+  differentiation in cultured keratinocytes: pre-programmed pathways in control
+  of {C}-{M}yc and {N}otch1 prevail over extracellular calcium signals}.
+\newblock {\em J. Invest. Dermatol.}, 124(5):1014--1025, May 2005.
+
+\bibitem{macnamara2012state}
+Aidan MacNamara, Camille Terfve, David Henriques, Beatriz~Pe{\~n}alver
+  Bernab{\'e}, and Julio Saez-Rodriguez.
+\newblock State--time spectrum of signal transduction logic models.
+\newblock {\em Physical Biology}, 9(4):045003, 2012.
+
+\bibitem{maurin2009modeling}
+Myl{\`e}ne Maurin, Morgan Magnin, and Olivier Roux.
+\newblock Modeling of genetic regulatory network in stochastic $\pi$-calculus.
+\newblock In {\em Bioinformatics and Computational Biology}, pages 282--294.
+  Springer, 2009.
+
+\bibitem{mitsos2009identifying}
+Alexander Mitsos, Ioannis~N Melas, Paraskeuas Siminelakis, Aikaterini~D
+  Chairakaki, Julio Saez-Rodriguez, and Leonidas~G Alexopoulos.
+\newblock Identifying drug effects via pathway alterations using an integer
+  linear programming optimization formulation on phosphoproteomic data.
+\newblock {\em PLoS computational biology}, 5(12):e1000591, 2009.
+
+\bibitem{molloy1982performance}
+Michael~K. Molloy.
+\newblock Performance analysis using stochastic petri nets.
+\newblock {\em Computers, IEEE Transactions on}, 100(9):913--917, 1982.
+
+\bibitem{PMR10-TCSB}
+{L}o{\"i}c {P}aulev{\'e}, {M}organ {M}agnin, and {O}livier {R}oux.
+\newblock Refining dynamics of gene regulatory networks in a stochastic
+  $\pi$-calculus framework.
+\newblock In {\em Transactions on Computational Systems Biology XIII}, pages
+  171--191. Springer, 2011.
+
+\bibitem{Pinna2010}
+Andrea Pinna, Nicola Soranzo, and Alberto de~la Fuente.
+\newblock From knockouts to networks: Establishing direct cause-effect
+  relationships through graph analysis.
+\newblock {\em PLoS ONE}, 5(10):e12912, 10 2010.
+
+\bibitem{porreca2010identification}
+Riccardo Porreca, Eugenio Cinquemani, John Lygeros, and Giancarlo
+  Ferrari-Trecate.
+\newblock Identification of genetic network dynamics with unate structure.
+\newblock {\em Bioinformatics}, 26(9):1239--1245, 2010.
+
+\bibitem{priami1995stochastic}
+Corrado Priami.
+\newblock Stochastic $\pi$-calculus.
+\newblock {\em The Computer Journal}, 38(7):578--589, 1995.
+
+\bibitem{RAT2006}
+R.~Altman S.~Reinker and J.~Timmer.
+\newblock Parameter estimation in stochastic biochemical reactions.
+\newblock {\em IEE Proceedings - Systems Biology}, 153, 2006.
+
+\bibitem{schaefer2009pid}
+Carl~F Schaefer, Kira Anthony, Shiva Krupa, Jeffrey Buchoff, Matthew Day, Timo
+  Hannay, and Kenneth~H Buetow.
+\newblock Pid: the pathway interaction database.
+\newblock {\em Nucleic acids research}, 37(suppl 1):D674--D679, 2009.
+
+\bibitem{Siebert06}
+Heike Siebert and Alexander Bockmayr.
+\newblock Incorporating time delays into the logical analysis of gene
+  regulatory networks.
+\newblock In {\em Computational Methods in Systems Biology}, volume 4210 of
+  {\em LNCS}, pages 169--183. Springer, 2006.
+
+\bibitem{snoussi1989qualitative}
+El~Houssine Snoussi.
+\newblock Qualitative dynamics of piecewise-linear differential equations: a
+  discrete mapping approach.
+\newblock {\em Dynamics and stability of Systems}, 4(3-4):565--583, 1989.
+
+\bibitem{thieffry1995dynamical}
+Denis Thieffry and Ren{\'e} Thomas.
+\newblock Dynamical behaviour of biological regulatory networks—ii. immunity
+  control in bacteriophage lambda.
+\newblock {\em Bulletin of Mathematical Biology}, 57(2):277--297, 1995.
+
+\bibitem{Thomas73}
+Ren{\'e} Thomas.
+\newblock Boolean formalization of genetic control circuits.
+\newblock {\em Journal of Theoretical Biology}, 42(3):563 -- 585, 1973.
+
+\bibitem{Tu2011}
+C.~L. Tu, W.~Chang, and D.~D. Bikle.
+\newblock {{T}he calcium-sensing receptor-dependent regulation of cell-cell
+  adhesion and keratinocyte differentiation requires {R}ho and filamin {A}}.
+\newblock {\em J. Invest. Dermatol.}, 131(5):1119--1128, May 2011.
+
+\bibitem{van2013timed}
+S~Van~Goethem, J-M Jacquet, Lubos Brim, and D~{\v{S}}afr{\'a}nek.
+\newblock Timed modelling of gene networks with arbitrarily precise expression
+  discretization.
+\newblock {\em Electronic Notes in Theoretical Computer Science}, 293:67--81,
+  2013.
+
+\bibitem{yu2012hipathdb}
+Namhee Yu, Jihae Seo, Kyoohyoung Rho, Yeongjun Jang, Jinah Park, Wan~Kyu Kim,
+  and Sanghyuk Lee.
+\newblock hipathdb: a human-integrated pathway database with facile
+  visualization.
+\newblock {\em Nucleic acids research}, 40(D1):D797--D802, 2012.
+
+
+
+
+
+
+
+
+
+\vfill
+\Large
+\begin{flushright}
+  \tval{Thank you}\hspace{1cm}~
+\end{flushright}
+\vfill
+
+~
+
+\end{frame}
+

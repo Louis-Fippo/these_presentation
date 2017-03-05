@@ -1,0 +1,398 @@
+%%explain the automatic model construction
+
+\begin{frame}[c]
+\frametitle{Network topology}
+\framesubtitle{Automatic patterns detection and transformation}
+
+%We have two procedures that allow us to detect and translate RSTC network to the Process Hitting model.
+
+\begin{tikzpicture}[auto]
+ 
+ % placement des noeuds
+ 
+ %\node[cloud, cloud puffs = 10, draw, minimum width = 0.1cm, minimum height = 0.1cm, fill = gray!10, scale=0.3] (rstcbis) at (-2,13){
+ %  \begin{tabular}{c}
+ %  \textbf{Biological network} \\ \hline
+ %  RSTC network
+ % \end{tabular}};
+ 
+ \node (rep) at (0,-5) {};
+  
+  \node[es,align=center,scale=0.5] (rstcbis) at (-2,11.5) {\begin{tabular}{c}
+                                            \textbf{Biological network} \\ \hline
+                                            RSTC network
+                                           \end{tabular}};
+
+ 
+\onslide<2->{
+%\draw[-open triangle 90] (0,12.5) -- (0.2,12.5);
+ \node[instruct,align=center, scale=0.7] (pro1) at (0.5,11.5) {\begin{tabular}{c}
+                                            \textbf{Patterns Detection} \\ \hline
+                                            in  RSTC network
+                                          \end{tabular}};
+      
+ \path
+  (rstcbis) edge[st] (pro1);
+}
+                                          
+ \onslide<3->{
+ %\draw[-open triangle 90] (2,12.5) -- (2.5,12.5);
+ \node[es, scale=0.5] (sop) at (3,11.5) {\begin{tabular}{c}
+                                            \textbf{Set of patterns} \\ \hline
+                                            of RSTC network
+                                           \end{tabular}};
+
+\path
+   (pro1) edge[st] (sop);
+                                           
+\node[scale=0.8] (bpat) at (-1,8) {\begin{tabular}{|c|}
+\hline
+\textbf{Biological Patterns}
+
+\\ \hline
+\begin{tikzpicture}
+\node[scale=0.7] (sa1) at (0,0){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+\node[qgre] (a) at (0,0.5) {a};
+\node[mod] (i) at (1,0.5) {i};
+\node[qgre] (b) at (2,0.5) {b};
+\node[es] (d) at (1,1.5) {Simple activation};
+
+% a restorer
+\path
+ (a) edge[act] (i)
+ (i) edge[st]  (b);
+\end{tikzpicture}};
+\end{tikzpicture}
+
+\\ \hline
+
+\begin{tikzpicture}
+\node[scale=0.7] (si1) at (0,0){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+\node[qgre] (a) at (0,0.5) {a};
+\node[mod] (i) at (1,0.5) {i};
+\node[qgre] (b) at (2,0.5) {b};
+\node[es] (d) at (1,1.5) {Simple inhibition};
+
+%a restorer 
+\path
+ (a) edge[inh] (i)
+ (i) edge[st]  (b);
+ \end{tikzpicture}};
+\end{tikzpicture}
+
+
+\\ \hline
+
+\begin{tikzpicture}
+\node[scale=0.7] (sai1) at (0,0){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,3);
+\node[qgre] (a) at (0,2) {a};
+\node[mod] (i) at (1,1) {i};
+\node[qgre] (b) at (0,0) {b};
+\node[qgre] (c) at (2,1) {c};
+\node[es] (d) at (1,3) {activation or inhibition};
+
+% arestorer
+\path
+ (a) edge[act] (i)
+ (b) edge[inh] (i)
+ (i) edge[st]  (c);
+\end{tikzpicture}};
+\end{tikzpicture}
+
+\\ \hline
+
+\end{tabular}
+};
+
+}
+
+
+\onslide<4->{
+
+\node[es,scale=0.5] (timed) at (3,10.5) {\begin{tabular}{c}
+                                            \textbf{Time delay} \\ \hline
+                                            Estimate from TSD
+                                           \end{tabular}};
+
+
+ \node[instruct,align=center, scale=0.7] (pro2) at (5.5,11.5) {\begin{tabular}{c}
+                                            \textbf{Patterns translation} \\ \hline
+                                            in  AN (PH) model
+                                           \end{tabular}};
+ \path
+    (sop) edge[st] (pro2)
+    (timed) edge[st] (pro2);
+ }
+ 
+ \onslide<5->{
+   
+   \node[es,scale=0.5] (php) at (8,11.5) {\begin{tabular}{c}
+                                            \textbf{AN (PH) Patterns} \\
+                                           \end{tabular}};
+\path
+   (pro2) edge[st] (php);
+
+\node[scale=0.8] (phpat) at (6.8,8) {\begin{tabular}{|c|c|}
+\hline
+
+\textbf{AN (Process Hitting) Transformations}
+
+ \\ \hline
+
+\begin{tikzpicture}
+%\exphpatact
+\node[scale=0.5] (sa) at (0,0) {\begin{tikzpicture}
+\exphpatact
+\end{tikzpicture}};
+\end{tikzpicture}
+
+
+\\ \hline
+
+
+\begin{tikzpicture}
+%\exphpatact
+\node[scale=0.5] (sa) at (0,0) {\begin{tikzpicture}
+\exphpatini
+\end{tikzpicture}};
+\end{tikzpicture}
+
+ \\ \hline
+
+
+\begin{tikzpicture}
+%\exphpatact
+\node[scale=0.5] (sai) at (0,0) {\begin{tikzpicture}
+\exphpatai
+\end{tikzpicture}};
+\end{tikzpicture}
+\\ \hline
+
+\end{tabular}
+};
+}
+\end{tikzpicture}
+
+%exemple of patterns 
+
+
+\end{frame}
+
+
+\begin{frame}[c]
+ \frametitle{Network topology}
+ \framesubtitle{Automatic patterns detection (method)} 
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+
+\begin{tikzpicture}[auto]
+
+\node[qgre] (a1) at (-3,-3) {a};
+\node[qgre] (a2) at (-1,-3) {b};
+\node[qgre] (a3) at (1,-3) {c};
+\node[qgre] (a4) at (3,-3) {d};
+%\node[qgre] (a5) at (5,-3) {e};
+
+\node[mod] (i1) at (-3,-2) {};
+\node[mod] (i2) at (-1,-2) {};
+\node[mod] (i3) at (1,-2) {};
+\node[mod] (i4) at (3,-2) {};
+%\node[mod] (i5) at (5,-2) {};
+
+\node[ps] (ps1) at (-3,-1) {PS1};
+\node[ps] (ps2) at (-1,-1) {PS2};
+\node[ps] (ps3) at (1,-1) {PS3};
+\node[ps] (ps4) at (3,-1) {PS4};
+%\node[ps] (ps5) at (5,-1) {PS5};
+
+\node[mod] (i6) at (-3,0) {};
+%\node[mod] (i7) at (-1,0) {};
+\node[mod] (i8) at (1,0) {};
+\node[mod] (i9) at (3,0) {};
+%\node[mod] (i10) at (5,0) {};
+
+\node[ps] (ps6) at (-3,1) {PS6};
+%\node[ps] (ps7) at (-1,1) {PS7};
+\node[ps] (ps8) at (1,1) {PS8};
+\node[ps] (ps9) at (3,1) {PS9};
+%\node[ps] (ps10) at (5,1) {PS10};
+
+%les complex
+\node[ecad] (d) at (0,3) {Ecad};
+\node[cplx] (c1) at (2,-1) {cplx1};
+\node[cplx] (c2) at (0,1) {cplx2};
+\node[cplx] (c3) at (-2,-1) {cplx3};
+\node[cplx] (c4) at (-2,1) {cplx4};
+\node[cplx] (c5) at (0,0) {cplx5};
+\node[cplx] (c6) at (2,1) {cplx6};
+
+%les seed node
+\node[sn] (sn1) at (-2,-3) {SN1};
+\node[sn] (sn2) at (2,-3) {SN2};
+
+
+%les edges 
+
+\path
+ (i1) edge[st] (a1)
+ (i2) edge[st] (a2)
+ (i3) edge[st]  (a3)
+ (i4) edge[st]  (a4)
+ %(i5) edge[st]  (a5)
+ 
+ (ps1) edge[act] (i1)
+ (ps2) edge[act] (i2)
+ (ps3) edge[act] (i2)
+ (ps3) edge[act] (i3)
+ (ps4) edge[act] (i4)
+ %(ps5) edge[act] (i5)
+ 
+ (i6) edge[st] (ps1)
+ (i6) edge[st] (ps2)
+ (i8) edge[st] (ps3)
+ (i9) edge[st] (ps4)
+ (i9) edge[st] (ps4)
+ %(i9) edge[st] (ps5)
+ %(i10) edge[st] (ps5)
+ 
+ (ps6) edge[act] (i6)
+ (ps8) edge[act] (i8)
+ (ps9) edge[act] (i9)
+ %(ps10) edge[act] (i10)
+ 
+ (d) edge[act] (ps6)
+ (d) edge[act] (ps8)
+ (d) edge[act] (ps9)
+ %(d) edge[act] (ps10)
+ 
+ (c4) edge[act] (c5)
+ (c2) edge[act] (c5)
+ (d) edge[act] (c2)
+ (c5) edge[inh] (ps2)
+ (c6) edge[act] (i8)
+ (c6) edge[act] (i9)
+ (i8) edge[st] (c1)
+ (i9) edge[st] (c1)
+ (c1) edge[act] (i4)
+ 
+ (ps3) edge[inh] (sn2)
+ (i4) edge[st] (sn2)
+ 
+ (ps1) edge[inh] (sn1)
+ (c3) edge[act] (sn1)
+ (c4) edge[act] (c3)
+ 
+ (a1) edge[inh, bend left] (ps6);
+ 
+
+ %pattern 1
+\only<2-5>{
+\node[snpat] (snpat1) at (1,-3) {};
+}
+\only<3-5>{
+\path
+ (a3) edge[stv] (i3);
+ }
+ \only<4-5>{
+\path
+ (i3) edge[stv] (ps3);
+ }
+  \only<5>{
+\node[snpat] (snpat2) at (1,-1) {};
+}
+
+  %le pattern rajouté
+\only<5-9>{
+\node[scale=0.9] (patraj1) at (5,-2){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+\node[ps] (aps3) at (0,0.5) {PS3};
+\node[mod] (ips3) at (1,0.5) {i};
+\node[qgre] (cps3) at (2,0.5) {c};
+
+% a restorer
+\path
+ (aps3) edge[act] (ips3)
+ (ips3) edge[st]  (cps3);
+\end{tikzpicture}};
+
+}
+
+%pattern 2
+
+%le pattern rajouté
+\only<9>{
+\node[scale=0.9] (sai1) at (5,-3.5){\begin{tikzpicture}[auto]
+\path[use as bounding box] (-0.7,-0.3) rectangle (2.5,3);
+\node[ps] (aps2) at (0,2) {PS2};
+\node[mod] (ips2) at (1,1) {i};
+\node[ps] (bps3) at (0,0) {PS3};
+\node[qgre] (cb) at (2,1) {b};
+
+% arestorer
+\path
+ (aps2) edge[act] (ips2)
+ (bps3) edge[act] (ips2)
+ (ips2) edge[st]  (cb);
+\end{tikzpicture}};
+
+
+}
+
+ \only<6-9>{
+\node[snpat] (snpat3) at (-1,-3) {};
+}
+
+
+ \only<7-9>{
+\path
+ (a2) edge[stv] (i2);
+ }
+ \only<8-9>{
+\path
+ (i2) edge[stv] (ps2)
+ (i2) edge[stv] (ps3);
+ }
+ 
+  \only<9>{
+\node[snpat] (snpat4) at (-1,-1) {};
+\node[snpat] (snpat5) at (1,-1) {};
+}
+
+
+ 
+\end{tikzpicture}
+
+\end{column}
+
+\begin{column}{0.4\textwidth}
+Two main types of nodes:
+ \begin{liste}
+  \item \tval{Terminal Nodes:} proteins, complexes, mRNA expressions, cellular states,...
+  \item \tval{Transient Nodes:} translocations, modifications, transcriptions,...
+ \end{liste}
+ 
+ \only<10->{
+ \tval{Complexity}:
+ The algorithm  has a time complexity of \tval{$\mathcal{O}(|V|\log{}(h))$}. 
+  Where 
+  \begin{liste}
+  \item \tval{$|V|$} is the set of nodes and \tval{$|E|$} is the set of edges.
+  \item $h$ is the average height of the patterns in the RSTC network. In the worst case 
+  $h = \log_{|V|}(|V|)$.
+ \end{liste}
+ }
+\end{column}
+
+
+
+\end{columns}
+
+\end{frame}
+

@@ -1,0 +1,121 @@
+
+\def\DEF{\stackrel{\Delta}=}
+\def\EQDEF{\stackrel{\Delta}\Leftrightarrow}
+
+\def\f#1{\operatorname{#1}}
+
+% sets
+\def\card#1{|#1|}
+\def\powerset#1{2^{#1}}
+\def\N{\mathbb N}
+
+\def\range#1#2{\{#1,\dots,#2\}}
+
+% sequences
+%\def\indexes#1{\mathbb{I}^{#1}}
+\def\indexes#1{\range 1 {\card{#1}}}
+\def\concat{\!::\!}
+\def\emptyseq{\varepsilon}
+
+\def\precond#1{ {}^\bullet #1 }
+\def\postcond#1{ #1 {}^\bullet}
+
+\def\play{\cdot}
+
+
+\def\stimes{\tilde{\times}}
+\def\sprod{\widetilde{\prod}}
+
+\def\disabling{\ominus}
+
+\def\Obj{\mathbf{Obj}}
+\def\LS{\mathbf{LS}}
+\def\Sol{\mathbf{Sol}}
+
+\def\sol{{\f{local\text-paths}^\#}}
+\def\csol{\f{local\text-paths}}
+\def\rcsol#1{\f{local\text-paths}_{#1}}
+
+\def\oasol{{\f{local\text-paths}^{\mathrm{oa}}}}
+\def\uasol{{\f{local\text-paths}^{\mathrm{ua}}}}
+
+\def\A{\mathcal{A}}
+\def\cwA{\A_\ctx^\w}
+\def\cwNodes{V_\ctx^\w}
+\def\cwEdges{E_\ctx^\w}
+
+\def\fsimplN{\zeta^N}
+\def\simplN#1{\fsimplN( #1)}
+
+\def\w{\omega}
+\def\ctx{\varsigma}
+
+\def\val{\mathbb V}
+\def\Val{\mathbf{Val}}
+\def\update{\f{update}}
+\def\M{\mathcal M}
+\def\rank{\f{rank}}
+
+\def\childs{\f{children}}
+\def\parents{\f{parents}}
+
+\def\SetNSets#1{\powerset(\powerset^{\leq N}(#1))}
+
+\def\Obs{\mathcal Obs}
+\def\Sys{\mathcal Sys}
+
+\def\floodname{$\cwA$-Minimal-Cut-NSets}
+
+\def\STRUCT{::=}
+
+\def\decode#1{\Lbrack#1\Rbrack}
+\def\encode#1{\Lparen#1\Rparen}
+
+\def\precond#1{ {}^\bullet #1 }
+\def\postcond#1{ #1 {}^\bullet}
+
+\def\get#1#2{#1(#2)}
+
+\def\anN{\Sigma}
+\def\anS{S}
+\def\anT{T}
+\def\antrl#1#2#3#4{ {#1}_{#2} \xrightarrow{#4} {#1}_{#3}}
+\def\antr#1#2#3{{#1}_{#2} \rightarrow {#1}_{#3}}
+\def\obj#1#2{{#1}\!\leadsto\!{#2}}
+\def\anobj#1#2#3{\obj{{#1}_{#2}}{{#1}_{#3}}}
+\def\RLCG{\mathcal B}
+\def\TRRed{\tr(\RLCG)}
+\def\dep{\f{enab}}
+\def\orig{\f{orig}}
+\def\dest{\f{dest}}
+\def\state#1{\langle #1 \rangle}
+
+\def\badObjs#1{\mathbf{bad}_{#1}}
+\def\valid#1{{\mathbf{valid}}_{#1}}
+
+\def\step{\tau}
+\def\trace{\pi}
+\def\traceb{\varpi}
+\def\lpath{\eta}
+\def\sinit{{s}}
+
+\def\cb{\f{cb}}
+\def\redact{\Psi}
+
+\def\Pint{\textsc{Pint}}
+
+\def\reach{\to^*}
+%\def\reach{\to^*}
+\def\nreach{\not\to^*}
+\def\unf{\f{unf\text{-}prefix}}
+\def\freach{\f{reach}}
+
+\def\fOA{\f{OA}}
+\def\fUA{\f{UA}}
+\def\OA#1#2{\fOA(#1\reach #2)}
+\def\UA#1#2{\fUA(#1\reach #2)}
+\def\lsoflp#1{\widetilde{#1}}
+
+%\def\trans#1#2#3{ #1 \overset{#3}{\longrightarrow} #2}
+\def\trans#1#2#3{ #1 \xrightarrow{#3} #2}
+

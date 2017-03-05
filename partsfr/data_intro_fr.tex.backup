@@ -1,0 +1,88 @@
+
+\begin{frame}[c]
+ \frametitle{Motivation}
+  %\pause
+ %figure illustrative
+ \begin{tikzpicture}[auto]
+  
+\path[use as bounding box] (-0.7,-2) rectangle (3,3);
+
+%le noeud pour les connaissances de la littérature, générales
+\node[align=center] (gk) at (2,3) {\begin{tabular}{|c|} 
+\hline
+ General knowledge  \\
+ \hline
+ Literature  \\
+  \hline
+ Hypotheses   \\
+  \hline
+\end{tabular}};
+
+%\pause
+
+%les noeud pour le réseau biologique
+\node[qgre] (a) at (1,1.5) {a};
+\node[mod] (i) at (2,1) {i};
+\node[qgre] (b) at (1,0.5) {b};
+\node[qgre] (c) at (2.5,1) {c};
+
+
+\path
+ (a) edge[act] (i)
+ (b) edge[inh] (i)
+ (i) edge[st]  (c);
+ 
+ %\pause
+
+\node (deco) at (2,-0.1) {Times series data};
+\node[align=center] (tsd) at (2,-1) {\begin{tabular}{|c|c|c|c|} 
+\hline
+ Genes  & 1h & ... & 24h  \\
+ \hline
+ Gene $1$  &   & ...  &    \\
+  \hline
+  Gene $2$  &   & ...  &    \\
+  \hline
+\end{tabular}};
+
+
+\onslide<2->{
+
+\node (d1) at (5,1) {};
+\node (d2) at (7.5,1) {};
+
+\node (d3) at (4.5,-1.5) {};
+\node (d4) at (4.5,3.5) {};
+
+
+\draw[->,line width=6pt, color=lightgray] (d1) -- (d2) node[above=10pt,midway]{\textcolor{black}{\textbf{Algebraic Modelling}}};
+}
+
+
+
+%\draw[decoration={brace,amplitude=12pt}, 
+%decorate,line width=2pt,gray] (d3) -- (d4) node[above=10pt,midway]{\textcolor{black}{\textbf{}}};
+
+
+\onslide<3->{
+%le modèle en process hitting
+\node[scale=0.4] (phmodel) at (10,1) {\begin{tikzpicture} \exphHM 
+                           \end{tikzpicture}};
+}
+
+\end{tikzpicture}
+
+\onslide<2->{
+ \begin{block}
+  
+  \begin{itemize}
+   \item Caractérisation formelle de la topologie et de la dynamique des réseaux de régulation biologique.
+   \item Intégration des données de séries temporelles.
+   \item Qualitative \& Quantitative refinement of the dynamics.        
+   \item Stochastic simulation and statistic analysis.
+  \end{itemize}
+
+ \end{block}
+}
+
+\end{frame}

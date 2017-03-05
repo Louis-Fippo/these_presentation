@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>={Stealth[width=3mm,length=3mm]},line join=bevel,font=\Large]
+%%
+\node (a_2) at (65.597bp,320.0bp) [draw,rectangle] {$a_2$};
+  \node (O_b_0_0) at (28.597bp,61.0bp)  {$\anobj b 0 0$};
+  \node (O_c_2_0) at (103.6bp,61.0bp)  {$\anobj c 2 0$};
+  \node (c_0) at (102.6bp,133.0bp) [draw,rectangle] {$c_0$};
+  \node (O_a_1_2) at (65.597bp,248.0bp)  {$\anobj a 1 2$};
+  \node (b_0) at (29.597bp,133.0bp) [draw,rectangle] {$b_0$};
+  \node (pintsol1) at (65.597bp,190.5bp) [draw,ellipse] {};
+  \node (pintsol2) at (28.597bp,3.5bp) [draw,ellipse] {};
+  \draw [->] (O_a_1_2) ..controls (65.597bp,221.59bp) and (65.597bp,212.02bp)  .. (pintsol1);
+  \draw [->] (O_b_0_0) ..controls (28.597bp,34.59bp) and (28.597bp,25.018bp)  .. (pintsol2);
+  \draw [->] (a_2) ..controls (65.597bp,293.98bp) and (65.597bp,284.71bp)  .. (O_a_1_2);
+  \draw [->] (c_0) ..controls (102.95bp,106.98bp) and (103.09bp,97.712bp)  .. (O_c_2_0);
+  \draw [->] (pintsol1) ..controls (70.418bp,182.27bp) and (78.07bp,170.79bp)  .. (c_0);
+  \draw [->] (b_0) ..controls (29.24bp,106.98bp) and (29.108bp,97.712bp)  .. (O_b_0_0);
+  \draw [->] (pintsol1) ..controls (60.907bp,182.27bp) and (53.462bp,170.79bp)  .. (b_0);
+%
+\end{tikzpicture}

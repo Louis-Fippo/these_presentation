@@ -1,0 +1,56 @@
+
+%\usepackage{tikz}
+
+
+\begin{frame}[c]
+%\frametitle{Approche}
+\begin{tikzpicture}[grn]
+
+ % placement des noeuds
+ 
+  \node[es,align=center] (rstc) at (-2,5) {\begin{tabular}{c}
+                                            \textbf{Réseaux biologiques} \\ \hline
+                                            Réseaux  RSTC
+                                           \end{tabular}};
+  
+  \node[es] (data) at (4,5) {\begin{tabular}{c}
+                                            \textbf{Données expérimentales} \\ \hline
+                                            Séries temporelles (TSD)
+                                           \end{tabular}};
+  
+ \node[instruct,align=center] (phmodel) at (-2,2.5) {\begin{tabular}{c}
+                                            \textbf{Modèles hybrides} \\ \hline
+                                            Modèles AN
+                                           \end{tabular}};
+                                           
+  \node[instruct] (estimation) at (2.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Estimation des paramètres}\\ \hline
+                                            $r$ et $sa$ 
+                                           \end{tabular}};
+                                           
+   
+  \node[instruct] (discretization) at (6.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Discrétisation} \\ \hline
+                                            TSD
+                                           \end{tabular}};
+                                           
+  \node[instruct] (simulation) at (-2,0) {\begin{tabular}{c}
+                                           \textbf{Simulation}\\ 
+                                           PINT
+                                          \end{tabular}};
+    
+  
+  \node[test] (test) at (3,0) {Validation du modèle};
+  
+ %placement des arrêtes
+  \draw[suite] (rstc) -- (phmodel);
+  \draw[suite] (phmodel) -- (simulation);
+  \draw[suite] (simulation) -- (test.west);
+  
+  \draw[suite] (data) -- (estimation);
+  \draw[suite] (estimation) -- (phmodel);
+  \draw[suite] (data) -- (discretization);
+  \draw[suite] (discretization) -- (test.east);
+\end{tikzpicture}
+
+\end{frame}

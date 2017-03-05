@@ -1,0 +1,66 @@
+
+%\usepackage{tikz}
+
+
+\begin{frame}[c]
+\frametitle{Approach, tools and methods}
+\begin{tikzpicture}[grn]
+
+ % placement des noeuds
+ 
+  \node[block,align=center] (rstc) at (-2,5) {\begin{tabular}{c}
+                                            \textbf{Biological network} \\ \hline
+                                            RSTC network
+                                           \end{tabular}};
+  
+  \node[block] (data) at (4,5) {\begin{tabular}{c}
+                                            \textbf{Experimental Data} \\ \hline
+                                            Time series data(TSD)
+                                           \end{tabular}};
+  
+ \node[instruct,align=center] (phmodel) at (-2,2.5) {\begin{tabular}{c}
+                                            \textbf{Hybrid Model} \\ \hline
+                                            PH Model
+                                           \end{tabular}};
+    %noeud étiquette 
+   \node[inner] (etiq3) at (-1.5,1.6) {3};
+                                           
+  \node[instruct] (estimation) at (2.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Estimation of parameters}\\ \hline
+                                            $r$ and $sa$ 
+                                           \end{tabular}};
+                                           
+    %noeud étiquette 
+   \node[inner] (etiq4) at (2,1.6) {4};
+   
+   
+  \node[instruct] (discretization) at (6.5,2.5) {\begin{tabular}{c}
+                                            \textbf{Discretization} \\ \hline
+                                            TSD
+                                           \end{tabular}};
+   %noeud étiquette 
+   \node[inner] (etiq5) at (5.5,1.6) {5};
+                                           
+                                           
+  \node[instruct] (simulation) at (-2,0) {\textbf{Simulation}};
+   %noeud étiquette 
+   \node[inner] (etiq6) at (-2,-0.6) {6};
+  
+  
+  
+  \node[test] (test) at (3,0) {Model validation};
+   %noeud étiquette 
+   \node[inner] (etiq7) at (0.5,-1.9) {7};
+  
+ %placement des arrêtes
+  \draw[suite] (rstc) --node[inner]{1} (phmodel);
+  \draw[suite] (phmodel) -- (simulation);
+  \draw[suite] (simulation) -- (test.west);
+  
+  \draw[suite] (data) --node[inner]{2} (estimation);
+  \draw[suite] (estimation) -- (phmodel);
+  \draw[suite] (data) -- (discretization);
+  \draw[suite] (discretization) -- (test.east);
+\end{tikzpicture}
+
+\end{frame}

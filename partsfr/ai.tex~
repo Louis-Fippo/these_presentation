@@ -1,0 +1,71 @@
+\begin{frame}
+\frametitle{SAN as CTMC}
+\begin{figure}[p]
+\centering
+\scalebox{0.4}{
+\input{figures/sg-example2-rate.pgf}
+}
+
+\label{ex-bifurcations}
+\end{figure}
+Bad news: \textcolor{red}{state space explosion}
+\end{frame}
+
+\begin{frame}
+\frametitle{Abstract Interpretation}
+\framesubtitle{Local Causality}
+\begin{columns}
+%l'automate
+\begin{column}{0.4\textwidth}
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exsanaidef
+\end{tikzpicture}
+}\end{center}
+\end{column}
+%le glc associé
+\begin{column}[c]{0.6\textwidth}
+
+local-cause($\obj{d_1}{d_2}$) = \{$\trans{d_1}{d_2}{b_1}$, $\trans{d_1}{d_2}{c_1}$\}
+local-cause^\#($\obj{d_1}{d_2}$) = $\{\{b_1\},\{c_1\}\}$ \\
+
+\hspace*{5em}
+
+\begin{center}\scalebox{\scaleex}{
+%\begin{tikzpicture}
+\exlcgaidef
+%\end{tikzpicture}
+}\end{center}
+
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Abstract Interpretation}
+\framesubtitle{Local Causality Graph}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{center}\scalebox{0.6}{
+\begin{tikzpicture}
+\exanppdef
+\end{tikzpicture}
+}\end{center}
+\end{column}
+\begin{column}{0.5\textwidth}
+%\exglcandef
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Abstract Interpretation}
+\framesubtitle{Quantified Local Causality}
+\begin{center}\scalebox{0.6}{
+\begin{tikzpicture}
+\exsanppdef
+\end{tikzpicture}
+}\end{center}
+
+
+\end{frame}

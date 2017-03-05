@@ -1,0 +1,36 @@
+\begin{frame}
+\frametitle{Definition of bifurcation}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=1.5cm]
+\node (s0) [circle,fill=gray!60] {$s_0$};
+\node (sb) [circle,fill=gray!60,above right of=s0,xshift=2cm] {$s_b$};
+\node (g) [circle,fill=blue!20,minimum width=7mm,below right of=sb,xshift=2cm] {$S_{g_1}$};
+\node (su) [above right of=sb] {$s_u$};
+\node (u) [below right of=su,xshift=5mm] {$\mathbf{\color{red}x}$};
+\path[->] (sb) edge[->,red,thick] node[auto] {$t_b$} (su) ;
+\path[->,bend left=20,densely dashed]
+	(s0) edge (sb)
+	(sb) edge (g)
+	(s0) edge [bend right=10] (g)
+	(su) edge[>={Rays[length=3mm,width=3mm]}] (u)
+;
+\end{tikzpicture}
+\end{figure}
+
+\begin{block}{Definition}
+$t_b$ is a bifurcation transition from $s_0$ to $g_1$
+
+$\Longleftrightarrow$
+there exists $s_b$ such that:
+
+%rajouter g1 \in Sg
+\begin{align*}
+\text{\cI}\enspace &s_u\nreach g_1
+&
+\text{\cII}\enspace &s_b\reach g_1
+&
+\text{\cIII}\enspace &s_0\reach s_b
+\end{align*}
+\end{block}
+\end{frame}

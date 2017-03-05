@@ -1,0 +1,232 @@
+% Définition du Process Hitting + sortes coopératives
+
+%mettre un RRB ----> en AAN  ----> STate graph 
+%rajouter une slide
+\begin{frame}
+\frametitle{Biological networks modelling}
+\begin{tikzpicture}
+\node (brn) at (0,5) {\begin{tikzpicture}[auto,scale=0.9] 
+                                                 \path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+                                                              \node[qgre,scale=0.8] (a) at (0,2) {a};
+                                                              \node[mod,scale=0.8] (i) at (1,1) {i};
+                                                              \node[qgre,scale=0.8] (b) at (0,0) {b};
+                                                              \node[qgre,scale=0.8] (c) at (2,1) {c};
+                                                              \path
+                                                                (a) edge[inhN,scale=0.1] (i)
+                                                                (b) edge[actN,scale=0.1] (i)
+                                                                (i) edge[st,scale=0.1]  (c);
+                                                              
+                                                 \end{tikzpicture}};
+\node[scale=0.6] (an) at (7,5) {\begin{tikzpicture}
+\exandef
+\end{tikzpicture}};
+\node[scale=0.6] (sg) at (2,1) {\input{figures/sg-example3.pgf}};
+\path 
+(brn) edge[->,line width=8pt, color=lightgray] (an)
+(an) edge[->,line width=8pt, color=lightgray,bend left] (sg)
+;
+
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Automata Networks}
+  %\framesubtitle{\tcite{Paulev\'e et al. 2012}}
+
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+% 1 : Sortes
+\only<1>{
+\tikzstyle{process}=[circle,minimum size=15pt,font=\footnotesize,inner sep=1pt]
+\tikzstyle{tick label}=[color=white, font=\footnotesize]
+\tikzstyle{tick}=[transparent]
+\tikzstyle{hit}=[transparent]
+\tikzstyle{selfhit}=[transparent, min distance=30pt,curve to]
+\tikzstyle{bounce}=[transparent]
+\tikzstyle{hlhit}=[transparent]
+\tikzstyle{local transitions}=[transparent]
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exandef
+\end{tikzpicture}
+}\end{center}
+}
+
+% 2 : Processus
+\only<2>{
+\tikzstyle{process}=[circle,draw,minimum size=15pt,font=\footnotesize,inner sep=1pt]
+\tikzstyle{tick label}=[font=\footnotesize]
+\tikzstyle{tick}=[densely dotted]
+\tikzstyle{hit}=[transparent]
+\tikzstyle{selfhit}=[transparent, min distance=30pt,curve to]
+\tikzstyle{bounce}=[transparent]
+\tikzstyle{hlhit}=[transparent]
+\tikzstyle{local transitions}=[transparent]
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exandef
+\end{tikzpicture}
+}\end{center}
+}
+
+% 3 : États
+\only<3>{
+\tikzstyle{hit}=[transparent]
+\tikzstyle{selfhit}=[transparent, min distance=30pt,curve to]
+\tikzstyle{bounce}=[transparent]
+\tikzstyle{hlhit}=[transparent]
+\tikzstyle{local transitions}=[transparent]
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exandef
+
+\TState{3}{a_0,b_0,c_0}
+\end{tikzpicture}
+}\end{center}
+}
+
+% 4 : Actions
+\only<4->{
+\tikzstyle{tick}=[densely dotted]
+\tikzstyle{hit}=[->,>=angle 45]
+\tikzstyle{selfhit}=[min distance=30pt,curve to]
+\tikzstyle{bounce}=[densely dotted,>=stealth',->]
+\tikzstyle{hlhit}=[very thick]
+\begin{center}\scalebox{\scaleex}{
+\begin{tikzpicture}
+\exandef
+\TState{4}{a_0,b_0,c_0}
+\TState{5}{a_1,b_0,c_0}
+\TState{6}{a_0,b_0,c_0}
+\TState{7}{a_2,b_0,c_0}
+\TState{8}{a_2,b_1,c_0}
+\end{tikzpicture}
+}\end{center}
+}
+\end{column}
+
+\begin{column}{0.4\textwidth}
+\begin{figure}[p]
+\centering
+
+\scalebox{0.4}{
+\only<4>{
+\tikzstyle{arc0}=[transparent]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[transparent]
+\tikzstyle{nd1}=[transparent]
+\tikzstyle{arc2}=[transparent]
+\tikzstyle{nd2}=[transparent]
+\tikzstyle{arc3}=[transparent]
+\tikzstyle{nd3}=[transparent]
+\tikzstyle{arc4}=[transparent]
+\tikzstyle{nd4}=[transparent]
+\tikzstyle{arc5}=[transparent]
+\tikzstyle{nd5}=[transparent]
+\input{figures/sg-example3.pgf}
+}
+\only<5>{
+\tikzstyle{arc0}=[->]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[->]
+\tikzstyle{nd1}=[]
+\tikzstyle{arc2}=[transparent]
+\tikzstyle{nd2}=[transparent]
+\tikzstyle{arc3}=[transparent]
+\tikzstyle{nd3}=[transparent]
+\tikzstyle{arc4}=[transparent]
+\tikzstyle{nd4}=[transparent]
+\tikzstyle{arc5}=[transparent]
+\tikzstyle{nd5}=[transparent]
+\input{figures/sg-example3.pgf}
+}
+\only<6>{
+\tikzstyle{arc0}=[->]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[->]
+\tikzstyle{nd1}=[]
+\tikzstyle{arc2}=[->]
+\tikzstyle{nd2}=[]
+\tikzstyle{arc3}=[transparent]
+\tikzstyle{nd3}=[transparent]
+\tikzstyle{arc4}=[transparent]
+\tikzstyle{nd4}=[transparent]
+\tikzstyle{arc5}=[transparent]
+\tikzstyle{nd5}=[transparent]
+\input{figures/sg-example3.pgf}
+}
+\only<7>{
+\tikzstyle{arc0}=[->]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[->]
+\tikzstyle{nd1}=[]
+\tikzstyle{arc2}=[->]
+\tikzstyle{nd2}=[]
+\tikzstyle{arc3}=[->]
+\tikzstyle{nd3}=[]
+\tikzstyle{arc4}=[transparent]
+\tikzstyle{nd4}=[transparent]
+\tikzstyle{arc5}=[transparent]
+\tikzstyle{nd5}=[transparent]
+\input{figures/sg-example3.pgf}
+}
+\only<8>{
+\tikzstyle{arc0}=[->]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[->]
+\tikzstyle{nd1}=[]
+\tikzstyle{arc2}=[->]
+\tikzstyle{nd2}=[]
+\tikzstyle{arc3}=[->]
+\tikzstyle{nd3}=[]
+\tikzstyle{arc4}=[->]
+\tikzstyle{nd4}=[]
+\tikzstyle{arc5}=[transparent]
+\tikzstyle{nd5}=[transparent]
+\input{figures/sg-example3.pgf}
+}
+\only<9>{
+\tikzstyle{arc0}=[->]
+\tikzstyle{nd0}=[]
+\tikzstyle{arc1}=[->]
+\tikzstyle{nd1}=[]
+\tikzstyle{arc2}=[->]
+\tikzstyle{nd2}=[]
+\tikzstyle{arc3}=[->]
+\tikzstyle{nd3}=[]
+\tikzstyle{arc4}=[->]
+\tikzstyle{nd4}=[]
+\tikzstyle{arc5}=[->]
+\tikzstyle{nd5}=[]
+\input{figures/sg-example3.pgf}
+}
+}
+
+\end{figure}
+
+\end{column}
+\end{columns}
+%\medskip
+
+\begin{liste}
+  \item \tval{Automata}: components \qex{$a$, $b$, $c$}
+\pause[2]
+  \item \tval{local states}: levels of expression \qex{$c_0$, $c_1$, $c_2$}
+\pause[3]
+  \item \tval{States}: sets of active Local states%
+  \only<3-4>{\qex{$\PHetat{a_0, b_0, c_0}$}}%
+  \only<5>{\qex{$\PHetat{a_1, b_0, c_0}$}}%
+  \only<6>{\qex{$\PHetat{a_0, b_0, c_0}$}}%
+  \only<7>{\qex{$\PHetat{a_2, b_0, c_0}$}}%
+  \only<8>{\qex{$\PHetat{a_2, b_1, c_0}$}}
+\pause[4]
+  \item \tval{Transitions}: dynamics \qex{\only<5>{\underline}{$t_1 = \trans{a_0}{a_1}{b_0}$}, \only<6>{\underline}{$t_2 = \trans{a_1}{a_0}{}$}, \only<7>{\underline}{$t_3 = \trans{a_0}{a_2}{b_0,c_0}$}, \only<8>{\underline}{$t_4 = \trans{b_0}{b_1}{}$}}
+\end{liste}
+%une seule transition à la fois
+%on peut avoir un choix il faut bien expliquer ça.
+\end{frame}
+
+

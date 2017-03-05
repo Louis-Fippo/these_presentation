@@ -1,0 +1,20 @@
+
+\begin{tikzpicture}[]},line join=bevel,font=\LARGE]
+%%
+  \node (6) at (405.0bp,18.0bp) [reach,nd4] {$\langle a_2,b_1,c_0\rangle$};
+  \node (2) at (405.0bp,90.0bp) [reach,nd3] {$\langle a_2,b_0,c_0\rangle$};
+  \node (1) at (570.0bp,90.0bp) [reach,nd1] {$\langle a_1,b_0,c_0\rangle$};
+  \node (0) at (469.0bp,162.0bp) [reach,nd0] {$s_0 = \langle a_0,b_0,c_0\rangle$};
+  \node (4) at (469.0bp,234.0bp) [reach,nd5] {$\langle a_0,b_1,c_0\rangle$};
+ 
+ 
+  \draw [->,arc3] (0) ..controls (445.65bp,135.46bp) and (435.95bp,124.86bp)  .. (2);
+  \draw [->,arc3] (0) ..controls (475.71bp,188.03bp) and (475.94bp,197.36bp)  .. (4);
+  \draw [->,arc4] (2) ..controls (405.0bp,63.983bp) and (405.0bp,54.712bp)  .. (6);
+  \draw [->,arc1] (0) ..controls (499.93bp,134.79bp) and (517.41bp,122.58bp)  .. (1);
+  \draw [->,arc2] (1) ..controls (539.0bp,117.26bp) and (521.52bp,129.47bp)  .. (0);
+  \draw [->,arc3] (4) ..controls (462.3bp,208.35bp) and (462.06bp,199.03bp)  .. (0);
+ 
+%
+\end{tikzpicture}
+

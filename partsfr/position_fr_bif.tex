@@ -1,0 +1,142 @@
+\begin{frame}[c]
+ \frametitle{Contributions}
+ 
+ \begin{tikzpicture}[auto]
+ 
+ \draw[thick, ->] (-3.5,0)--node[near end,above,rotate=90] {\scriptsize Niveau d'abstraction des dynamiques}(-3.5,8);
+ 
+ \node[debutfin,align=center] (niv1) at (-2,7) {\begin{tikzpicture}[auto,scale=0.5] 
+                                                 \path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+                                                              \node[qgre,scale=0.5] (a) at (0,2) {a};
+                                                              \node[mod,scale=0.5] (i) at (1,1) {i};
+                                                              \node[qgre,scale=0.5] (b) at (0,0) {b};
+                                                              \node[qgre,scale=0.5] (c) at (2,1) {c};
+                                                              \path
+                                                                (a) edge[inh,scale=0.1] (i)
+                                                                (b) edge[act,scale=0.1] (i)
+                                                                (i) edge[st,scale=0.1]  (c);
+                                                              
+                                                 \end{tikzpicture}};
+                                                 
+ \node[debutfin,align=center] (niv2) at (-2,4) {\begin{tikzpicture}[auto,scale=0.5] 
+                                                 \path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+                                                              \node[qgre,scale=0.5] (a) at (0,2) {a};
+                                                              \node[mod,scale=0.5] (i) at (1,1) {i};
+                                                              \node[qgre,scale=0.5] (b) at (0,0) {b};
+                                                              \node[qgre,scale=0.5] (c) at (2,1) {c};
+                                                              \path
+                                                                (a) edge[inh,scale=0.1] (i)
+                                                                (b) edge[act,scale=0.1] (i)
+                                                                (i) edge[st,scale=0.1]  (c);
+                                                                
+                                                  \node[grandplus] (plus) at (1.2,0.2) {$+$};
+                                                  \node[grandplus] (plus) at (2,0) {$K$};
+                                                              
+                                                 \end{tikzpicture}};
+                                                
+ \node[debutfin,align=center] (niv3) at (-2,1) {\begin{tikzpicture}[auto,scale=0.5] 
+                                                 \path[use as bounding box] (-0.7,-0.3) rectangle (2.5,2);
+
+                                                              \node[qgre,scale=0.5] (a) at (0,2) {a};
+                                                              \node[mod,scale=0.5] (i) at (1,1) {i};
+                                                              \node[qgre,scale=0.5] (b) at (0,0) {b};
+                                                              \node[qgre,scale=0.5] (c) at (2,1) {c};
+                                                              \path
+                                                                (a) edge[inh,scale=0.1] (i)
+                                                                (b) edge[act,scale=0.1] (i)
+                                                                (i) edge[st,scale=0.1]  (c);
+                                                                
+                                                  \node[grandplus] (plus) at (1,0) {$+$};
+                                                  \node[grandplus] (plus) at (2,0.5) {$K$};
+                                                  \node[scale=0.5] (clock) at (2,-0.25) {\includegraphics[scale=0.22]{figs/clock.png}};
+                                                              
+                                                 \end{tikzpicture}};
+                                                 
+
+ 
+ %\node[grandplus] (plus) at (2,0) {$+$};
+ 
+
+ 
+ \draw[thick, ->] (7.8,8)--node[near end,below,rotate=90] {\scriptsize Précision des propriétés}(7.8,0); %ligne de la précision des propriétés 
+ 
+ 
+ 
+ 
+ % liste des propriétés
+ %general properties
+ \node[instruct,align=center] (gp) at (5.8,7) {\begin{tabular}{c}
+                                            {\scriptsize Propriétés générales: bornes} \\ 
+                                            {\scriptsize sur le nbr d'attracteurs;}\\ {\scriptsize fonctionnalités,...}
+                                           \end{tabular}};
+ 
+ %fixed points
+ \node[instruct,align=center] (fp) at (6.7,5.6) {\begin{tabular}{c}
+                                                 {\scriptsize \'Etats stables}
+                                                 \end{tabular}};
+                                           
+ %reachabilities
+ \node[instruct,align=center] (reach) at (6.7,4) {\begin{tabular}{c} {\scriptsize Bifurcations} \\ {\scriptsize Accessibilité} \\ {\scriptsize (CTL)} \end{tabular}};
+ \node[instruct,align=center] (qreach) at (6.7,1) {\begin{tabular}{c} {\scriptsize Accessibilité} \\ {\scriptsize quantitative} \\{\scriptsize (CCSL)} \end{tabular}};
+ 
+ 
+ %process hitting
+ 
+
+ 
+ 
+ 
+ \uncover<1->{
+ 
+% \begin{pgfonlayer}{background}
+ \draw[->,color=gray!10,bend right,line width=4pt,round] (niv3)--node[near center,below] {\scriptsize }(qreach);
+ 
+ \draw[->,color=gray!10,bend right,line width=0.5pt] (niv1)-- (gp);
+ 
+  \draw[->,color=gray!10,bend right,line width=0.6pt,round] (niv2)--node[near center,below] {\scriptsize }(fp);
+ 
+ \draw[->,color=gray!10,bend right,line width=2pt,round] (niv2)--node[near center,below] {\scriptsize }(reach);
+% \end{pgfonlayer}
+ 
+   
+ %ajout de la notion de chronométrie
+ \draw[gray!80,loosely dashed] (-4,2.5) -- node[very near start,below] {\scriptsize Chronométrie}node[very near start,above] {\scriptsize Chronologie}node[very near end,below] {\scriptsize Quantitative}node[very near end,above] {\scriptsize Qualitative}(8,2.5);
+
+ 
+ }
+ 
+ \uncover<1->{
+ \node[es,align=center] (ph) at (2,4.5) {\begin{tabular}{c}
+                                           {\scriptsize \textbf{Réseaux} }\\ 
+                                           {\scriptsize \textbf{d'automates}}
+                                           \end{tabular}};
+ \node[instruct,align=center] (pint) at (2,3) {\scriptsize PINT};
+ \draw[->,dashed] (ph)--(pint);
+ }
+ 
+ 
+ %les relations
+ \uncover<1->{
+ \draw[suite,color=gray] (niv1)--(ph);
+ \draw[suite,color=gray] (niv2)--(ph);
+  \draw[suite,line width=0.5pt,color=gray] (ph)--node[near center,above,rotate=18] {\scriptsize Analyse statique}(fp);
+ \draw[suite,color=darkblue,line width=2pt] (niv3)--node[near center,above,bend right,rotate=45] {\scriptsize Modélisation}node[inner,below]{1}(ph);
+ \draw[suite,darkblue,round,line width=2pt]     (pint) --node[near center,above,bend right,rotate=90] {\scriptsize Simulation}node[inner,right]{2}(2,1.5)-- node[near center,above,bend right] {\scriptsize Analyse} (niv3);
+ \draw[suite,color=darkblue,line width=2pt] (ph)--node[near center,above,rotate=-35] {\scriptsize Analyse statique}node[inner,below]{3}(qreach);
+  \draw[suite,blue!60] (ph)--node[near center,above,blue!60,rotate=-5] {\scriptsize Analyse statique}node[inner,below]{4}(reach);
+ }
+ 
+ \uncover<2->{
+  %\draw[suite,color=darkblue] (niv3)--node[near center,above,bend right,rotate=45] {\scriptsize Modélisation}node[inner,below]{1}(ph);
+  %\draw[suite,darkblue,round]     (pint) --node[near center,above,bend right,rotate=90] {\scriptsize Simulation}node[inner,right]{2}(2,1.5)-- node[near center,above,bend right] {\scriptsize Analyse} (niv3);
+  %\draw[suite,color=darkblue] (ph)--node[near center,above,rotate=-35] {\scriptsize analyse statique}node[inner,below]{3}(qreach);
+  \draw[suite,darkblue,line width=2pt] (ph)--node[near center,above,darkblue,rotate=-5] {\scriptsize Analyse statique}node[inner,below]{4}(reach);
+ }
+ 
+  
+ \end{tikzpicture}
+
+ 
+\end{frame}

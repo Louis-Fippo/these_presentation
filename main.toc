@@ -1,0 +1,26 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{\'Etat de l'art}{11}{0}{2}
+\beamer@sectionintoc {3}{Contributions}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Les r\IeC {\'e}seaux d'automates}{24}{0}{3}
+\beamer@subsectionintoc {3}{2}{Les r\IeC {\'e}seaux d'automates stochastiques}{34}{0}{3}
+\beamer@sectionintoc {4}{Raffinement de la dynamique par int\IeC {\'e}gration des s\IeC {\'e}ries temporelles}{37}{0}{4}
+\beamer@subsectionintoc {4}{1}{Les donn\IeC {\'e}es}{40}{0}{4}
+\beamer@subsectionintoc {4}{2}{Formalisation des RSTC comme des r\IeC {\'e}seaux d'automates}{42}{0}{4}
+\beamer@subsectionintoc {4}{3}{Estimation et int\IeC {\'e}gration des param\IeC {\`e}tres temporels et stochastiques}{58}{0}{4}
+\beamer@subsectionintoc {4}{4}{Simulations \& Validation}{66}{0}{4}
+\beamer@subsectionintoc {4}{5}{Analyse statistique des traces}{71}{0}{4}
+\beamer@sectionintoc {5}{Analyse statique des propri\IeC {\'e}t\IeC {\'e}s quantitatives dans les r\IeC {\'e}seaux d'automates stochastiques}{74}{0}{5}
+\beamer@subsectionintoc {5}{1}{Interpr\IeC {\'e}tation abstraite quantitative des sc\IeC {\'e}narios}{78}{0}{5}
+\beamer@subsectionintoc {5}{2}{Graphe de Causalit\IeC {\'e} Locale quantifi\IeC {\'e}}{83}{0}{5}
+\beamer@subsectionintoc {5}{3}{Estimation de la probabilit\IeC {\'e} et des d\IeC {\'e}lais}{83}{0}{5}
+\beamer@sectionintoc {6}{Analyse statique des bifurcations}{91}{0}{6}
+\beamer@subsectionintoc {6}{1}{C'est quoi une bifurcation?}{95}{0}{6}
+\beamer@subsectionintoc {6}{2}{Comment identifier les bifurcations?}{97}{0}{6}
+\beamer@subsectionintoc {6}{3}{Mise en {\oe }uvre \& applications}{103}{0}{6}
+\beamer@subsectionintoc {6}{4}{Applications biologiques de l'identification des bifurcations}{104}{0}{6}
+\beamer@sectionintoc {7}{Conclusions \& Perspectives}{107}{0}{7}
+\beamer@sectionintoc {8}{Annexes}{116}{0}{8}
+\beamer@subsectionintoc {8}{1}{Sortes de synchronisation}{116}{0}{8}
+\beamer@subsectionintoc {8}{2}{Formules g\IeC {\'e}n\IeC {\'e}rales pour le QGLC}{133}{0}{8}
